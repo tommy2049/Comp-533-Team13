@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ram:Aspect xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ram="http://cs.mcgill.ca/sel/ram/3.0" xmi:id="_WRDKsOxYEei5bMiJMVAJVA" name="Log with Time ">
+  <realizes href="Logging.core#_aht6AOwpEeiquolpRP0ulg"/>
+  <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
+  <structuralView xmi:id="_WRDKsexYEei5bMiJMVAJVA">
+    <classes xsi:type="ram:Class" xmi:id="_WRDKsuxYEei5bMiJMVAJVA" name="Logger" visibility="public">
+      <operations xmi:id="_WRDKs-xYEei5bMiJMVAJVA" name="logExecutionWithTime" visibility="public" returnType="_WRDKtOxYEei5bMiJMVAJVA">
+        <parameters xmi:id="_ZC78IOxbEei5bMiJMVAJVA" name="startTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
+        <parameters xmi:id="_aGQaUOxbEei5bMiJMVAJVA" name="endTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
+      </operations>
+      <attributes xmi:id="_RPTnwOxbEei5bMiJMVAJVA" name="startTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
+      <attributes xmi:id="_Sc-UwOxbEei5bMiJMVAJVA" name="endTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
+    </classes>
+    <types xsi:type="ram:RVoid" xmi:id="_WRDKtOxYEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RAny" xmi:id="_WRDKtexYEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RBoolean" xmi:id="_WRDKtuxYEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RInt" xmi:id="_WRDKt-xYEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RChar" xmi:id="_WRDKuOxYEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RString" xmi:id="_WRDKuexYEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RDouble" xmi:id="_WRDKuuxYEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RFloat" xmi:id="_WRDKu-xYEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RLong" xmi:id="_WRDKvOxYEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RByte" xmi:id="_WRDKvexYEei5bMiJMVAJVA"/>
+  </structuralView>
+  <instantiations xmi:id="_WRDKvuxYEei5bMiJMVAJVA">
+    <source xsi:type="ram:Aspect" href="Log%20Execution.ram#_dvrm0OxVEei5bMiJMVAJVA"/>
+  </instantiations>
+  <layout xmi:id="_WRDKv-xYEei5bMiJMVAJVA">
+    <containers xmi:id="_WRDKwOxYEei5bMiJMVAJVA" key="_WRDKsexYEei5bMiJMVAJVA">
+      <value xmi:id="_WRDKwexYEei5bMiJMVAJVA" key="_WRDKsuxYEei5bMiJMVAJVA">
+        <value xmi:id="_WRDKwuxYEei5bMiJMVAJVA" x="399.00012" y="262.0"/>
+      </value>
+    </containers>
+  </layout>
+</ram:Aspect>

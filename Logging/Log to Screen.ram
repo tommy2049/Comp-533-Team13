@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ram:Aspect xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ram="http://cs.mcgill.ca/sel/ram/3.0" xmi:id="_R9mnQOxSEei5bMiJMVAJVA" name="Log to Screen">
+  <realizes href="Logging.core#_G3WoMOwpEeiquolpRP0ulg"/>
+  <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
+  <structuralView xmi:id="_R9mnQexSEei5bMiJMVAJVA">
+    <classes xsi:type="ram:Class" xmi:id="_R9mnQuxSEei5bMiJMVAJVA" name="Logger"/>
+    <classes xsi:type="ram:Class" xmi:id="_R9mnQ-xSEei5bMiJMVAJVA" name="ConsoleLogger" visibility="public" superTypes="_R9mnQuxSEei5bMiJMVAJVA">
+      <operations xmi:id="_XR5HMOxZEei5bMiJMVAJVA" name="logToConsole" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA">
+        <parameters xmi:id="_XR5HMexZEei5bMiJMVAJVA" name="msg" type="_R9mnSexSEei5bMiJMVAJVA"/>
+      </operations>
+    </classes>
+    <types xsi:type="ram:RVoid" xmi:id="_R9mnROxSEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RAny" xmi:id="_R9mnRexSEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RBoolean" xmi:id="_R9mnRuxSEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RInt" xmi:id="_R9mnR-xSEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RChar" xmi:id="_R9mnSOxSEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RString" xmi:id="_R9mnSexSEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RDouble" xmi:id="_R9mnSuxSEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RFloat" xmi:id="_R9mnS-xSEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RLong" xmi:id="_R9mnTOxSEei5bMiJMVAJVA"/>
+    <types xsi:type="ram:RByte" xmi:id="_R9mnTexSEei5bMiJMVAJVA"/>
+  </structuralView>
+  <instantiations xmi:id="_R9mnTuxSEei5bMiJMVAJVA">
+    <source xsi:type="ram:Aspect" href="Logging.ram#_0tSx4OwwEeiquolpRP0ulg"/>
+  </instantiations>
+  <layout xmi:id="_R9mnT-xSEei5bMiJMVAJVA">
+    <containers xmi:id="_R9mnUOxSEei5bMiJMVAJVA" key="_R9mnQexSEei5bMiJMVAJVA">
+      <value xmi:id="_R9mnUexSEei5bMiJMVAJVA" key="_R9mnQuxSEei5bMiJMVAJVA">
+        <value xmi:id="_R9mnUuxSEei5bMiJMVAJVA" x="539.0" y="95.0"/>
+      </value>
+      <value xmi:id="_R9mnU-xSEei5bMiJMVAJVA" key="_R9mnQ-xSEei5bMiJMVAJVA">
+        <value xmi:id="_R9mnVOxSEei5bMiJMVAJVA" x="470.5" y="315.0"/>
+      </value>
+    </containers>
+  </layout>
+</ram:Aspect>
