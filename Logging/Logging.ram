@@ -18,41 +18,14 @@
     </compositions>
     <reuse href="Logging.core#_GwaV4OwtEeiquolpRP0ulg"/>
   </modelReuses>
-  <modelReuses xmi:id="_gXCyAOxSEei5bMiJMVAJVA">
-    <compositions xsi:type="ram:Instantiation" xmi:id="_gXCyAexSEei5bMiJMVAJVA">
-      <source xsi:type="ram:Aspect" href="Reused_Association/Woven_Association_Association_One.ram#_DhF6MOwtEeiquolpRP0ulg"/>
-      <mappings xsi:type="ram:ClassifierMapping" xmi:id="_gXCyAuxSEei5bMiJMVAJVA" to="_0tYRdOwwEeiquolpRP0ulg">
-        <from xsi:type="ram:Class" href="Reused_Association/Woven_Association_Association_One.ram#_DhF6MuwtEeiquolpRP0ulg"/>
-      </mappings>
-      <mappings xsi:type="ram:ClassifierMapping" xmi:id="_gXCyA-xSEei5bMiJMVAJVA" to="_0tXqYOwwEeiquolpRP0ulg">
-        <from xsi:type="ram:Class" href="Reused_Association/Woven_Association_Association_One.ram#_DhF6NOwtEeiquolpRP0ulg"/>
-        <operationMappings xmi:id="_gXCyBOxSEei5bMiJMVAJVA" to="_gXEAIOxSEei5bMiJMVAJVA">
-          <from xsi:type="ram:Operation" href="Reused_Association/Woven_Association_Association_One.ram#_DhF6NewtEeiquolpRP0ulg"/>
-        </operationMappings>
-        <operationMappings xmi:id="_gXCyBexSEei5bMiJMVAJVA" to="_gXEnMOxSEei5bMiJMVAJVA">
-          <from xsi:type="ram:Operation" href="Reused_Association/Woven_Association_Association_One.ram#_DhF6NuwtEeiquolpRP0ulg"/>
-        </operationMappings>
-      </mappings>
-    </compositions>
-    <reuse href="Logging.core#_gXCyBuxSEei5bMiJMVAJVA"/>
-  </modelReuses>
   <realizes href="Logging.core#_zOhncewoEeiquolpRP0ulg"/>
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_0tWcQOwwEeiquolpRP0ulg">
-    <classes xsi:type="ram:Class" xmi:id="_0tXqYOwwEeiquolpRP0ulg" name="Client">
-      <operations xmi:id="_gXEAIOxSEei5bMiJMVAJVA" name="getMyLoggingManager" extendedVisibility="package" returnType="_0tYRdOwwEeiquolpRP0ulg"/>
-      <operations xmi:id="_gXEnMOxSEei5bMiJMVAJVA" name="setMyLoggingManager" extendedVisibility="package" returnType="_0taGoOwwEeiquolpRP0ulg">
-        <parameters xmi:id="_gXEnMexSEei5bMiJMVAJVA" name="newObject" type="_0tYRdOwwEeiquolpRP0ulg"/>
-      </operations>
-      <associationEnds xmi:id="_0tYRc-wwEeiquolpRP0ulg" name="myLoggingManager" lowerBound="1" assoc="_0tZfluwwEeiquolpRP0ulg" featureSelection="_gXCyAOxSEei5bMiJMVAJVA"/>
-    </classes>
-    <classes xsi:type="ram:Class" xmi:id="_0tYRdOwwEeiquolpRP0ulg" name="LoggingManager" visibility="public">
+    <classes xsi:type="ram:Class" xmi:id="_0tYRdOwwEeiquolpRP0ulg" name="Loggable" partiality="public" visibility="public">
       <operations xmi:id="_0tYRdewwEeiquolpRP0ulg" name="getMyLogger" extendedVisibility="package" returnType="_0tZfkewwEeiquolpRP0ulg"/>
       <operations xmi:id="_0tY4gOwwEeiquolpRP0ulg" name="setMyLogger" extendedVisibility="package" returnType="_0taGoOwwEeiquolpRP0ulg">
         <parameters xmi:id="_0tY4gewwEeiquolpRP0ulg" name="newObject" type="_0tZfkewwEeiquolpRP0ulg"/>
       </operations>
-      <operations xmi:id="_0tY4guwwEeiquolpRP0ulg" name="create" visibility="public" returnType="_0tZfmOwwEeiquolpRP0ulg"/>
-      <associationEnds xmi:id="_0tY4g-wwEeiquolpRP0ulg" name="myClient" lowerBound="1" navigable="false" assoc="_0tZfluwwEeiquolpRP0ulg"/>
       <associationEnds xmi:id="_0tZfkOwwEeiquolpRP0ulg" name="myLogger" lowerBound="1" assoc="_0tZfl-wwEeiquolpRP0ulg" featureSelection="_0tV1NewwEeiquolpRP0ulg"/>
     </classes>
     <classes xsi:type="ram:Class" xmi:id="_0tZfkewwEeiquolpRP0ulg" name="Logger" visibility="public" abstract="true">
@@ -60,10 +33,8 @@
       <operations xmi:id="_X36-sOxUEei5bMiJMVAJVA" name="disable" visibility="public" returnType="_0tZfmOwwEeiquolpRP0ulg"/>
       <associationEnds xmi:id="_0tZfkuwwEeiquolpRP0ulg" name="myLoggingManager" lowerBound="1" navigable="false" assoc="_0tZfl-wwEeiquolpRP0ulg"/>
       <attributes xmi:id="_H8O-EOxUEei5bMiJMVAJVA" name="enabled" type="_0taGoOwwEeiquolpRP0ulg"/>
+      <attributes xmi:id="_bOQuwOxcEeiXMf-B5UoxPg" name="messsage" type="_0taGo-wwEeiquolpRP0ulg"/>
     </classes>
-    <classes xsi:type="ram:Class" xmi:id="_0tZflOwwEeiquolpRP0ulg" name="ConsoleLogger" superTypes="_0tZfkewwEeiquolpRP0ulg"/>
-    <classes xsi:type="ram:Class" xmi:id="_EdJvcOxREei5bMiJMVAJVA" name="FileLogger" superTypes="_0tZfkewwEeiquolpRP0ulg"/>
-    <associations xmi:id="_0tZfluwwEeiquolpRP0ulg" name="Client_LoggingManager" ends="_0tYRc-wwEeiquolpRP0ulg _0tY4g-wwEeiquolpRP0ulg"/>
     <associations xmi:id="_0tZfl-wwEeiquolpRP0ulg" name="LoggingManager_Logger" ends="_0tZfkOwwEeiquolpRP0ulg _0tZfkuwwEeiquolpRP0ulg"/>
     <types xsi:type="ram:RVoid" xmi:id="_0tZfmOwwEeiquolpRP0ulg"/>
     <types xsi:type="ram:RAny" xmi:id="_0tZfmewwEeiquolpRP0ulg"/>
@@ -79,20 +50,11 @@
   </structuralView>
   <layout xmi:id="_0tci4OwwEeiquolpRP0ulg">
     <containers xmi:id="_0tci4ewwEeiquolpRP0ulg" key="_0tWcQOwwEeiquolpRP0ulg">
-      <value xmi:id="_0tci4uwwEeiquolpRP0ulg" key="_0tXqYOwwEeiquolpRP0ulg">
-        <value xmi:id="_0tci4-wwEeiquolpRP0ulg" x="1080.0" y="85.0"/>
-      </value>
       <value xmi:id="_0tci5OwwEeiquolpRP0ulg" key="_0tYRdOwwEeiquolpRP0ulg">
         <value xmi:id="_0tci5ewwEeiquolpRP0ulg" x="1456.0016" y="85.0"/>
       </value>
       <value xmi:id="_0tdJ8OwwEeiquolpRP0ulg" key="_0tZfkewwEeiquolpRP0ulg">
-        <value xmi:id="_0tdJ8ewwEeiquolpRP0ulg" x="1451.4612" y="330.80756"/>
-      </value>
-      <value xmi:id="_0tdJ8uwwEeiquolpRP0ulg" key="_0tZflOwwEeiquolpRP0ulg">
-        <value xmi:id="_0tdJ8-wwEeiquolpRP0ulg" x="1704.7114" y="635.5"/>
-      </value>
-      <value xmi:id="_EdK9kOxREei5bMiJMVAJVA" key="_EdJvcOxREei5bMiJMVAJVA">
-        <value xmi:id="_EdK9kexREei5bMiJMVAJVA" x="1284.3387" y="635.5"/>
+        <value xmi:id="_0tdJ8ewwEeiquolpRP0ulg" x="1452.0016" y="328.39618"/>
       </value>
     </containers>
   </layout>

@@ -4,7 +4,13 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_b4gq0exKEei_vLWF9CDkqg">
     <classes xsi:type="ram:Class" xmi:id="_b4gq0uxKEei_vLWF9CDkqg" name="Logger"/>
-    <classes xsi:type="ram:Class" xmi:id="_b4gq0-xKEei_vLWF9CDkqg" name="FileLogger" superTypes="_b4gq0uxKEei_vLWF9CDkqg"/>
+    <classes xsi:type="ram:Class" xmi:id="_b4gq0-xKEei_vLWF9CDkqg" name="FileLogger" visibility="public" superTypes="_b4gq0uxKEei_vLWF9CDkqg">
+      <operations xmi:id="_IZl2MOxZEei5bMiJMVAJVA" name="logToFile" visibility="public" returnType="_b4gq1OxKEei_vLWF9CDkqg">
+        <parameters xmi:id="_O4yuQOxZEei5bMiJMVAJVA" name="message" type="_b4gq2exKEei_vLWF9CDkqg"/>
+        <parameters xmi:id="_IZl2MexZEei5bMiJMVAJVA" name="filename" type="_b4gq2exKEei_vLWF9CDkqg"/>
+      </operations>
+      <attributes xmi:id="_8_B3YOxYEei5bMiJMVAJVA" name="filename" type="_b4gq2exKEei_vLWF9CDkqg"/>
+    </classes>
     <types xsi:type="ram:RVoid" xmi:id="_b4gq1OxKEei_vLWF9CDkqg"/>
     <types xsi:type="ram:RAny" xmi:id="_b4gq1exKEei_vLWF9CDkqg"/>
     <types xsi:type="ram:RBoolean" xmi:id="_b4gq1uxKEei_vLWF9CDkqg"/>
@@ -25,7 +31,7 @@
         <value xmi:id="_b4gq4uxKEei_vLWF9CDkqg" x="504.0" y="287.00006"/>
       </value>
       <value xmi:id="_b4gq4-xKEei_vLWF9CDkqg" key="_b4gq0-xKEei_vLWF9CDkqg">
-        <value xmi:id="_b4gq5OxKEei_vLWF9CDkqg" x="503.99603" y="449.0"/>
+        <value xmi:id="_b4gq5OxKEei_vLWF9CDkqg" x="388.0" y="454.99997"/>
       </value>
     </containers>
   </layout>

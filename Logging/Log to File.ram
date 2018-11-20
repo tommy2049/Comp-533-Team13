@@ -6,7 +6,7 @@
     <classes xsi:type="ram:Class" xmi:id="_b4gq0uxKEei_vLWF9CDkqg" name="Logger"/>
     <classes xsi:type="ram:Class" xmi:id="_b4gq0-xKEei_vLWF9CDkqg" name="FileLogger" visibility="public" superTypes="_b4gq0uxKEei_vLWF9CDkqg">
       <operations xmi:id="_IZl2MOxZEei5bMiJMVAJVA" name="logToFile" visibility="public" returnType="_b4gq1OxKEei_vLWF9CDkqg">
-        <parameters xmi:id="_O4yuQOxZEei5bMiJMVAJVA" name="msg" type="_b4gq2exKEei_vLWF9CDkqg"/>
+        <parameters xmi:id="_O4yuQOxZEei5bMiJMVAJVA" name="message" type="_b4gq2exKEei_vLWF9CDkqg"/>
         <parameters xmi:id="_IZl2MexZEei5bMiJMVAJVA" name="filename" type="_b4gq2exKEei_vLWF9CDkqg"/>
       </operations>
       <attributes xmi:id="_8_B3YOxYEei5bMiJMVAJVA" name="filename" type="_b4gq2exKEei_vLWF9CDkqg"/>
