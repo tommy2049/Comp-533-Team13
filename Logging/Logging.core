@@ -9,19 +9,19 @@
   <featureModel xmi:id="_zOhncOwoEeiquolpRP0ulg" coreConcern="_zObg0OwoEeiquolpRP0ulg" root="_zOhncewoEeiquolpRP0ulg">
     <features xmi:id="_zOhncewoEeiquolpRP0ulg" name="Logging" children="_94kvUOwoEeiquolpRP0ulg _XV8hkOwpEeiquolpRP0ulg">
       <realizedBy xsi:type="ram:Aspect" href="Logging.ram#_0tSx4OwwEeiquolpRP0ulg"/>
-      <reuses xmi:id="_GwaV4OwtEeiquolpRP0ulg" name="Association_LoggingManager_Logger" selectedConfiguration="_GwaV4ewtEeiquolpRP0ulg">
-        <reusedConcern href="Reused_Association/Association.core#_mZ-ooACWEeWTy6SkLveZ6w"/>
-        <configurations xmi:id="_GwaV4ewtEeiquolpRP0ulg" name="Automatic selection" reuse="_GwaV4OwtEeiquolpRP0ulg">
-          <source xsi:type="core:COREFeatureModel" href="Reused_Association/Association.core#_mZ_PsACWEeWTy6SkLveZ6w"/>
-          <selected href="Reused_Association/Association.core#_mZ_PsQCWEeWTy6SkLveZ6w"/>
-          <selected href="Reused_Association/Association.core#_nEJnAACWEeWTy6SkLveZ6w"/>
-          <selected href="Reused_Association/Association.core#_EnSLwH19EeW8vqKd4iftUw"/>
-        </configurations>
-      </reuses>
     </features>
     <features xmi:id="_94kvUOwoEeiquolpRP0ulg" name="Log Destination" children="_G3WoMOwpEeiquolpRP0ulg _IhSacOwpEeiquolpRP0ulg" parent="_zOhncewoEeiquolpRP0ulg" parentRelationship="Mandatory"/>
     <features xmi:id="_G3WoMOwpEeiquolpRP0ulg" name="Log to Screen" parent="_94kvUOwoEeiquolpRP0ulg" parentRelationship="OR">
       <realizedBy xsi:type="ram:Aspect" href="Log%20to%20Screen.ram#_R9mnQOxSEei5bMiJMVAJVA"/>
+      <reuses xmi:id="_sSIdNu0REei3bermciyb1g" name="Association_Loggable_ConsoleLogger" selectedConfiguration="_sSIdN-0REei3bermciyb1g">
+        <reusedConcern href="Reused_Association/Association.core#_mZ-ooACWEeWTy6SkLveZ6w"/>
+        <configurations xmi:id="_sSIdN-0REei3bermciyb1g" name="Automatic selection" reuse="_sSIdNu0REei3bermciyb1g">
+          <source xsi:type="core:COREFeatureModel" href="Reused_Association/Association.core#_mZ_PsACWEeWTy6SkLveZ6w"/>
+          <selected href="Reused_Association/Association.core#_mZ_PsQCWEeWTy6SkLveZ6w"/>
+          <selected href="Reused_Association/Association.core#_EnSLwH19EeW8vqKd4iftUw"/>
+          <selected href="Reused_Association/Association.core#_nEJnAACWEeWTy6SkLveZ6w"/>
+        </configurations>
+      </reuses>
     </features>
     <features xmi:id="_IhSacOwpEeiquolpRP0ulg" name="Log to File" parent="_94kvUOwoEeiquolpRP0ulg" parentRelationship="OR">
       <realizedBy xsi:type="ram:Aspect" href="Log%20to%20File.ram#_b4gq0OxKEei_vLWF9CDkqg"/>
