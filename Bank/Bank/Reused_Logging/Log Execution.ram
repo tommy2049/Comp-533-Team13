@@ -3,7 +3,7 @@
   <realizes href="Logging.core#_XV8hkOwpEeiquolpRP0ulg"/>
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_dvrm0exVEei5bMiJMVAJVA">
-    <classes xsi:type="ram:Class" xmi:id="_dvrm0uxVEei5bMiJMVAJVA" name="Logger" visibility="public">
+    <classes xsi:type="ram:Class" xmi:id="_dvrm0uxVEei5bMiJMVAJVA" name="Loggable" partiality="public" visibility="public">
       <operations xmi:id="_4unAgOxXEei5bMiJMVAJVA" name="logExecution" visibility="public" returnType="_dvrm1OxVEei5bMiJMVAJVA">
         <parameters xmi:id="_6f9hAOxlEeipZrBGM6NF1g" name="message" type="_dvrm2exVEei5bMiJMVAJVA"/>
       </operations>

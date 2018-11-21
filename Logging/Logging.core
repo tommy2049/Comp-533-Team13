@@ -25,6 +25,15 @@
     </features>
     <features xmi:id="_IhSacOwpEeiquolpRP0ulg" name="Log to File" parent="_94kvUOwoEeiquolpRP0ulg" parentRelationship="OR">
       <realizedBy xsi:type="ram:Aspect" href="Log%20to%20File.ram#_b4gq0OxKEei_vLWF9CDkqg"/>
+      <reuses xmi:id="_Qvvotu3hEeiHCLHnjZWf-Q" name="Association_Loggable_FileLogger" selectedConfiguration="_Qvvot-3hEeiHCLHnjZWf-Q">
+        <reusedConcern href="Reused_Association/Association.core#_mZ-ooACWEeWTy6SkLveZ6w"/>
+        <configurations xmi:id="_Qvvot-3hEeiHCLHnjZWf-Q" name="Automatic selection" reuse="_Qvvotu3hEeiHCLHnjZWf-Q">
+          <source xsi:type="core:COREFeatureModel" href="Reused_Association/Association.core#_mZ_PsACWEeWTy6SkLveZ6w"/>
+          <selected href="Reused_Association/Association.core#_mZ_PsQCWEeWTy6SkLveZ6w"/>
+          <selected href="Reused_Association/Association.core#_nEJnAACWEeWTy6SkLveZ6w"/>
+          <selected href="Reused_Association/Association.core#_EnSLwH19EeW8vqKd4iftUw"/>
+        </configurations>
+      </reuses>
     </features>
     <features xmi:id="_XV8hkOwpEeiquolpRP0ulg" name="Log Operation Execution" children="_aht6AOwpEeiquolpRP0ulg" parent="_zOhncewoEeiquolpRP0ulg" parentRelationship="Optional">
       <realizedBy xsi:type="ram:Aspect" href="Log%20Execution.ram#_dvrm0OxVEei5bMiJMVAJVA"/>

@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ram:Aspect xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ram="http://cs.mcgill.ca/sel/ram/3.0" xmi:id="_b4gq0OxKEei_vLWF9CDkqg" name="Log to File">
+  <modelReuses xmi:id="_QvvosO3hEeiHCLHnjZWf-Q">
+    <compositions xsi:type="ram:Instantiation" xmi:id="_Qvvose3hEeiHCLHnjZWf-Q">
+      <source xsi:type="ram:Aspect" href="Reused_Association/Woven_Association_Association_One.ram#_DhF6MOwtEeiquolpRP0ulg"/>
+      <mappings xsi:type="ram:ClassifierMapping" xmi:id="_Qvvosu3hEeiHCLHnjZWf-Q" to="_waeKgO3gEeiHCLHnjZWf-Q">
+        <from xsi:type="ram:Class" href="Reused_Association/Woven_Association_Association_One.ram#_DhF6MuwtEeiquolpRP0ulg"/>
+      </mappings>
+      <mappings xsi:type="ram:ClassifierMapping" xmi:id="_Qvvos-3hEeiHCLHnjZWf-Q" to="_b4gq0uxKEei_vLWF9CDkqg">
+        <from xsi:type="ram:Class" href="Reused_Association/Woven_Association_Association_One.ram#_DhF6NOwtEeiquolpRP0ulg"/>
+        <operationMappings xmi:id="_QvvotO3hEeiHCLHnjZWf-Q" to="_QvwPwO3hEeiHCLHnjZWf-Q">
+          <from xsi:type="ram:Operation" href="Reused_Association/Woven_Association_Association_One.ram#_DhF6NewtEeiquolpRP0ulg"/>
+        </operationMappings>
+        <operationMappings xmi:id="_Qvvote3hEeiHCLHnjZWf-Q" to="_Qvw20O3hEeiHCLHnjZWf-Q">
+          <from xsi:type="ram:Operation" href="Reused_Association/Woven_Association_Association_One.ram#_DhF6NuwtEeiquolpRP0ulg"/>
+        </operationMappings>
+      </mappings>
+    </compositions>
+    <reuse href="Logging.core#_Qvvotu3hEeiHCLHnjZWf-Q"/>
+  </modelReuses>
   <realizes href="Logging.core#_IhSacOwpEeiquolpRP0ulg"/>
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_b4gq0exKEei_vLWF9CDkqg">
-    <classes xsi:type="ram:Class" xmi:id="_b4gq0uxKEei_vLWF9CDkqg" name="Logger"/>
-    <classes xsi:type="ram:Class" xmi:id="_b4gq0-xKEei_vLWF9CDkqg" name="FileLogger" visibility="public" superTypes="_b4gq0uxKEei_vLWF9CDkqg">
-      <operations xmi:id="_IZl2MOxZEei5bMiJMVAJVA" name="logToFile" visibility="public" returnType="_b4gq1OxKEei_vLWF9CDkqg">
-        <parameters xmi:id="_O4yuQOxZEei5bMiJMVAJVA" name="message" type="_b4gq2exKEei_vLWF9CDkqg"/>
-        <parameters xmi:id="_IZl2MexZEei5bMiJMVAJVA" name="filename" type="_b4gq2exKEei_vLWF9CDkqg"/>
+    <classes xsi:type="ram:Class" xmi:id="_b4gq0uxKEei_vLWF9CDkqg" name="Loggable" partiality="public">
+      <operations xmi:id="_QvwPwO3hEeiHCLHnjZWf-Q" name="getMyFileLogger" extendedVisibility="package" returnType="_waeKgO3gEeiHCLHnjZWf-Q"/>
+      <operations xmi:id="_Qvw20O3hEeiHCLHnjZWf-Q" name="setMyFileLogger" extendedVisibility="package" returnType="_b4gq1uxKEei_vLWF9CDkqg">
+        <parameters xmi:id="_Qvw20e3hEeiHCLHnjZWf-Q" name="newObject" type="_waeKgO3gEeiHCLHnjZWf-Q"/>
       </operations>
-      <attributes xmi:id="_8_B3YOxYEei5bMiJMVAJVA" name="filename" type="_b4gq2exKEei_vLWF9CDkqg"/>
+      <associationEnds xmi:id="_QvrXQO3hEeiHCLHnjZWf-Q" name="myFileLogger" lowerBound="1" assoc="_Qvr-Ue3hEeiHCLHnjZWf-Q" featureSelection="_QvvosO3hEeiHCLHnjZWf-Q"/>
     </classes>
+    <classes xsi:type="ram:Class" xmi:id="_waeKgO3gEeiHCLHnjZWf-Q" name="FileLogger" visibility="public">
+      <operations xmi:id="_Fd_AkO3hEeiHCLHnjZWf-Q" name="logToFile" visibility="public" returnType="_b4gq1OxKEei_vLWF9CDkqg">
+        <parameters xmi:id="_HVUVoO3hEeiHCLHnjZWf-Q" name="msg" type="_b4gq2exKEei_vLWF9CDkqg"/>
+        <parameters xmi:id="_JFpDwO3hEeiHCLHnjZWf-Q" name="filename" type="_b4gq2exKEei_vLWF9CDkqg"/>
+      </operations>
+      <associationEnds xmi:id="_Qvr-UO3hEeiHCLHnjZWf-Q" name="myLoggable" lowerBound="1" navigable="false" assoc="_Qvr-Ue3hEeiHCLHnjZWf-Q"/>
+    </classes>
+    <associations xmi:id="_Qvr-Ue3hEeiHCLHnjZWf-Q" name="Loggable_FileLogger" ends="_QvrXQO3hEeiHCLHnjZWf-Q _Qvr-UO3hEeiHCLHnjZWf-Q"/>
     <types xsi:type="ram:RVoid" xmi:id="_b4gq1OxKEei_vLWF9CDkqg"/>
     <types xsi:type="ram:RAny" xmi:id="_b4gq1exKEei_vLWF9CDkqg"/>
     <types xsi:type="ram:RBoolean" xmi:id="_b4gq1uxKEei_vLWF9CDkqg"/>
@@ -28,10 +53,10 @@
   <layout xmi:id="_b4gq3-xKEei_vLWF9CDkqg">
     <containers xmi:id="_b4gq4OxKEei_vLWF9CDkqg" key="_b4gq0exKEei_vLWF9CDkqg">
       <value xmi:id="_b4gq4exKEei_vLWF9CDkqg" key="_b4gq0uxKEei_vLWF9CDkqg">
-        <value xmi:id="_b4gq4uxKEei_vLWF9CDkqg" x="504.0" y="287.00006"/>
+        <value xmi:id="_b4gq4uxKEei_vLWF9CDkqg" x="504.0" y="242.00009"/>
       </value>
-      <value xmi:id="_b4gq4-xKEei_vLWF9CDkqg" key="_b4gq0-xKEei_vLWF9CDkqg">
-        <value xmi:id="_b4gq5OxKEei_vLWF9CDkqg" x="388.0" y="454.99997"/>
+      <value xmi:id="_wafYoO3gEeiHCLHnjZWf-Q" key="_waeKgO3gEeiHCLHnjZWf-Q">
+        <value xmi:id="_wafYoe3gEeiHCLHnjZWf-Q" x="388.0" y="500.07233"/>
       </value>
     </containers>
   </layout>

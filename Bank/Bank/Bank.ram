@@ -414,17 +414,11 @@
     </compositions>
     <reuse href="Bank.core#_xwSIEL0mEeiuha-UdeUxLQ"/>
   </modelReuses>
-  <modelReuses xmi:id="_LaqSIOxnEeiXX7Hf8Z1UXw">
-    <compositions xsi:type="ram:Instantiation" xmi:id="_LaqSIexnEeiXX7Hf8Z1UXw">
-      <source xsi:type="ram:Aspect" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_LaQpgOxnEeiXX7Hf8Z1UXw"/>
-      <mappings xsi:type="ram:ClassifierMapping" xmi:id="_MkV3AOxnEeiXX7Hf8Z1UXw" to="_sQCtELp9EeiBEfOlEucTtg">
-        <from xsi:type="ram:Class" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_LaQpmOxnEeiXX7Hf8Z1UXw"/>
-      </mappings>
-      <mappings xsi:type="ram:ClassifierMapping" xmi:id="_Oas7sOxnEeiXX7Hf8Z1UXw" to="_rPvVwL0yEei4VOCAXwKjCQ">
-        <from xsi:type="ram:Class" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_LaQpguxnEeiXX7Hf8Z1UXw"/>
-      </mappings>
+  <modelReuses xmi:id="_D43AYO3iEei4qKOdOry_yA">
+    <compositions xsi:type="ram:Instantiation" xmi:id="_D43AYe3iEei4qKOdOry_yA">
+      <source xsi:type="ram:Aspect" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_D4hCIO3iEei4qKOdOry_yA"/>
     </compositions>
-    <reuse href="Bank.core#_LavxsOxnEeiXX7Hf8Z1UXw"/>
+    <reuse href="Bank.core#_D4744O3iEei4qKOdOry_yA"/>
   </modelReuses>
   <realizes href="Bank.core#_rDCucbp9EeiBEfOlEucTtg"/>
   <coreConcern href="Bank.core#_rDCHYLp9EeiBEfOlEucTtg"/>
