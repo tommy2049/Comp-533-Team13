@@ -4,10 +4,9 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_WRDKsexYEei5bMiJMVAJVA">
     <classes xsi:type="ram:Class" xmi:id="_WRDKsuxYEei5bMiJMVAJVA" name="Loggable" partiality="public" visibility="public">
-      <operations xmi:id="_WRDKs-xYEei5bMiJMVAJVA" name="logExecutionWithTime" visibility="public" returnType="_WRDKtOxYEei5bMiJMVAJVA">
-        <parameters xmi:id="_-m4TEOxlEeipZrBGM6NF1g" name="message" type="_WRDKuexYEei5bMiJMVAJVA"/>
-        <parameters xmi:id="_ZC78IOxbEei5bMiJMVAJVA" name="startTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
-        <parameters xmi:id="_aGQaUOxbEei5bMiJMVAJVA" name="endTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
+      <operations xmi:id="_6WQ2gO3mEei4qKOdOry_yA" name="getLogExecutionWithTimeMsg" visibility="public" returnType="_WRDKuexYEei5bMiJMVAJVA">
+        <parameters xmi:id="_8SOz8O3mEei4qKOdOry_yA" name="startTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
+        <parameters xmi:id="_BkMc0O3nEei4qKOdOry_yA" name="endTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
       </operations>
       <attributes xmi:id="_RPTnwOxbEei5bMiJMVAJVA" name="startTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
       <attributes xmi:id="_Sc-UwOxbEei5bMiJMVAJVA" name="endTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>

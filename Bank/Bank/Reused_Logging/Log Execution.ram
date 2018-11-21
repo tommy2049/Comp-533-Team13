@@ -4,9 +4,7 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_dvrm0exVEei5bMiJMVAJVA">
     <classes xsi:type="ram:Class" xmi:id="_dvrm0uxVEei5bMiJMVAJVA" name="Loggable" partiality="public" visibility="public">
-      <operations xmi:id="_4unAgOxXEei5bMiJMVAJVA" name="logExecution" visibility="public" returnType="_dvrm1OxVEei5bMiJMVAJVA">
-        <parameters xmi:id="_6f9hAOxlEeipZrBGM6NF1g" name="message" type="_dvrm2exVEei5bMiJMVAJVA"/>
-      </operations>
+      <operations xmi:id="_rF6R4O3mEei4qKOdOry_yA" name="getLogExecutionMsg" visibility="public" returnType="_dvrm2exVEei5bMiJMVAJVA"/>
     </classes>
     <types xsi:type="ram:RVoid" xmi:id="_dvrm1OxVEei5bMiJMVAJVA"/>
     <types xsi:type="ram:RAny" xmi:id="_dvrm1exVEei5bMiJMVAJVA"/>
@@ -25,7 +23,7 @@
   <layout xmi:id="_dvrm3-xVEei5bMiJMVAJVA">
     <containers xmi:id="_dvrm4OxVEei5bMiJMVAJVA" key="_dvrm0exVEei5bMiJMVAJVA">
       <value xmi:id="_dvrm4exVEei5bMiJMVAJVA" key="_dvrm0uxVEei5bMiJMVAJVA">
-        <value xmi:id="_dvrm4uxVEei5bMiJMVAJVA" x="555.9997" y="206.99995"/>
+        <value xmi:id="_dvrm4uxVEei5bMiJMVAJVA" x="355.9999" y="230.99976"/>
       </value>
     </containers>
   </layout>

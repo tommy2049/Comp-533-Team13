@@ -414,12 +414,6 @@
     </compositions>
     <reuse href="Bank.core#_xwSIEL0mEeiuha-UdeUxLQ"/>
   </modelReuses>
-  <modelReuses xmi:id="_D43AYO3iEei4qKOdOry_yA">
-    <compositions xsi:type="ram:Instantiation" xmi:id="_D43AYe3iEei4qKOdOry_yA">
-      <source xsi:type="ram:Aspect" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_D4hCIO3iEei4qKOdOry_yA"/>
-    </compositions>
-    <reuse href="Bank.core#_D4744O3iEei4qKOdOry_yA"/>
-  </modelReuses>
   <realizes href="Bank.core#_rDCucbp9EeiBEfOlEucTtg"/>
   <coreConcern href="Bank.core#_rDCHYLp9EeiBEfOlEucTtg"/>
   <structuralView xmi:id="_r7ojUbp9EeiBEfOlEucTtg">

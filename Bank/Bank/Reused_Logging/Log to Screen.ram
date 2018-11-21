@@ -29,9 +29,10 @@
       <associationEnds xmi:id="_nt6rIO0REei3bermciyb1g" name="myConsoleLogger" lowerBound="1" assoc="_nt7SMe0REei3bermciyb1g" featureSelection="_sSIdMO0REei3bermciyb1g"/>
     </classes>
     <classes xsi:type="ram:Class" xmi:id="_d_v8sO0REei3bermciyb1g" name="ConsoleLogger" visibility="public">
-      <operations xmi:id="_BObQ8O0SEei3bermciyb1g" name="logExecution" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA">
-        <parameters xmi:id="_BObQ8e0SEei3bermciyb1g" name="msg" type="_R9mnSexSEei5bMiJMVAJVA"/>
+      <operations xmi:id="_U5iy0O3lEei4qKOdOry_yA" name="logToConsole" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA">
+        <parameters xmi:id="_Kg2EMO3mEei4qKOdOry_yA" name="msg" type="_R9mnSexSEei5bMiJMVAJVA"/>
       </operations>
+      <operations xmi:id="_YpSToO3oEei0ZPZHYxifaQ" name="enable" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA"/>
       <associationEnds xmi:id="_nt7SMO0REei3bermciyb1g" name="myLoggable" lowerBound="1" navigable="false" assoc="_nt7SMe0REei3bermciyb1g"/>
     </classes>
     <associations xmi:id="_nt7SMe0REei3bermciyb1g" name="Loggable_ConsoleLogger" ends="_nt6rIO0REei3bermciyb1g _nt7SMO0REei3bermciyb1g"/>
@@ -48,6 +49,9 @@
   </structuralView>
   <instantiations xmi:id="_R9mnTuxSEei5bMiJMVAJVA">
     <source xsi:type="ram:Aspect" href="Logging.ram#_0tSx4OwwEeiquolpRP0ulg"/>
+    <mappings xsi:type="ram:ClassifierMapping" xmi:id="_hSRisO3oEei0ZPZHYxifaQ" to="_d_v8sO0REei3bermciyb1g">
+      <from xsi:type="ram:Class" href="Logging.ram#_0tYRdOwwEeiquolpRP0ulg"/>
+    </mappings>
   </instantiations>
   <layout xmi:id="_R9mnT-xSEei5bMiJMVAJVA">
     <containers xmi:id="_R9mnUOxSEei5bMiJMVAJVA" key="_R9mnQexSEei5bMiJMVAJVA">
@@ -55,7 +59,7 @@
         <value xmi:id="_R9mnUuxSEei5bMiJMVAJVA" x="539.0" y="146.0"/>
       </value>
       <value xmi:id="_d_xK0O0REei3bermciyb1g" key="_d_v8sO0REei3bermciyb1g">
-        <value xmi:id="_d_xK0e0REei3bermciyb1g" x="539.01" y="434.9999"/>
+        <value xmi:id="_d_xK0e0REei3bermciyb1g" x="362.0" y="416.99985"/>
       </value>
     </containers>
   </layout>
