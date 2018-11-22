@@ -47,6 +47,27 @@
     <types xsi:type="ram:RLong" xmi:id="_b4gq3OxKEei_vLWF9CDkqg"/>
     <types xsi:type="ram:RByte" xmi:id="_b4gq3exKEei_vLWF9CDkqg"/>
   </structuralView>
+  <messageViews xsi:type="ram:MessageView" xmi:id="_X0RP0-3rEeiRHvV3GzBKNQ" specifies="_Fd_AkO3hEeiHCLHnjZWf-Q">
+    <specification xmi:id="_X0RP1O3rEeiRHvV3GzBKNQ">
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_X0RP1e3rEeiRHvV3GzBKNQ" covered="_X0RP1-3rEeiRHvV3GzBKNQ" message="_X0RP2O3rEeiRHvV3GzBKNQ"/>
+      <fragments xsi:type="ram:ExecutionStatement" xmi:id="_ZsO3AO3rEeiRHvV3GzBKNQ" covered="_X0RP1-3rEeiRHvV3GzBKNQ">
+        <specification xsi:type="ram:OpaqueExpression" xmi:id="_ZsO3Ae3rEeiRHvV3GzBKNQ" body="FileWriter writer = new FileWriter(filename, &quot;UTF-8&quot;)" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:ExecutionStatement" xmi:id="_5i_0QO3rEeiRHvV3GzBKNQ" covered="_X0RP1-3rEeiRHvV3GzBKNQ">
+        <specification xsi:type="ram:OpaqueExpression" xmi:id="_5i_0Qe3rEeiRHvV3GzBKNQ" body="writer.append(msg)" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:ExecutionStatement" xmi:id="_-LissO3rEeiRHvV3GzBKNQ" covered="_X0RP1-3rEeiRHvV3GzBKNQ">
+        <specification xsi:type="ram:OpaqueExpression" xmi:id="_-Lisse3rEeiRHvV3GzBKNQ" body="writer.close()" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_X0RP1u3rEeiRHvV3GzBKNQ" covered="_X0RP1-3rEeiRHvV3GzBKNQ" message="_X0RP2e3rEeiRHvV3GzBKNQ"/>
+      <lifelines xmi:id="_X0RP1-3rEeiRHvV3GzBKNQ" represents="_X0RP2u3rEeiRHvV3GzBKNQ" coveredBy="_X0RP1e3rEeiRHvV3GzBKNQ _X0RP1u3rEeiRHvV3GzBKNQ _ZsO3AO3rEeiRHvV3GzBKNQ _5i_0QO3rEeiRHvV3GzBKNQ _-LissO3rEeiRHvV3GzBKNQ"/>
+      <messages xmi:id="_X0RP2O3rEeiRHvV3GzBKNQ" sendEvent="_X0RP2-3rEeiRHvV3GzBKNQ" receiveEvent="_X0RP1e3rEeiRHvV3GzBKNQ" signature="_Fd_AkO3hEeiHCLHnjZWf-Q"/>
+      <messages xmi:id="_X0RP2e3rEeiRHvV3GzBKNQ" sendEvent="_X0RP1u3rEeiRHvV3GzBKNQ" receiveEvent="_X0RP3O3rEeiRHvV3GzBKNQ" signature="_Fd_AkO3hEeiHCLHnjZWf-Q" messageSort="reply"/>
+      <properties xmi:id="_X0RP2u3rEeiRHvV3GzBKNQ" name="target" lowerBound="1" type="_waeKgO3gEeiHCLHnjZWf-Q"/>
+      <formalGates xmi:id="_X0RP2-3rEeiRHvV3GzBKNQ" message="_X0RP2O3rEeiRHvV3GzBKNQ" name="in_logToFile"/>
+      <formalGates xmi:id="_X0RP3O3rEeiRHvV3GzBKNQ" message="_X0RP2e3rEeiRHvV3GzBKNQ" name="out_logToFile"/>
+    </specification>
+  </messageViews>
   <instantiations xmi:id="_b4gq3uxKEei_vLWF9CDkqg">
     <source xsi:type="ram:Aspect" href="Logging.ram#_0tSx4OwwEeiquolpRP0ulg"/>
   </instantiations>
@@ -57,6 +78,11 @@
       </value>
       <value xmi:id="_wafYoO3gEeiHCLHnjZWf-Q" key="_waeKgO3gEeiHCLHnjZWf-Q">
         <value xmi:id="_wafYoe3gEeiHCLHnjZWf-Q" x="388.0" y="500.07233"/>
+      </value>
+    </containers>
+    <containers xmi:id="_X0RP0O3rEeiRHvV3GzBKNQ" key="_X0RP0-3rEeiRHvV3GzBKNQ">
+      <value xmi:id="_X0RP0e3rEeiRHvV3GzBKNQ" key="_X0RP1-3rEeiRHvV3GzBKNQ">
+        <value xmi:id="_X0RP0u3rEeiRHvV3GzBKNQ" x="100.0" y="100.0"/>
       </value>
     </containers>
   </layout>

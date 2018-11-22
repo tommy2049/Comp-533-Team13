@@ -5,8 +5,8 @@
   <structuralView xmi:id="_WRDKsexYEei5bMiJMVAJVA">
     <classes xsi:type="ram:Class" xmi:id="_WRDKsuxYEei5bMiJMVAJVA" name="Loggable" partiality="public" visibility="public">
       <operations xmi:id="_6WQ2gO3mEei4qKOdOry_yA" name="getLogExecutionWithTimeMsg" visibility="public" returnType="_WRDKuexYEei5bMiJMVAJVA">
-        <parameters xmi:id="_8SOz8O3mEei4qKOdOry_yA" name="startTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
-        <parameters xmi:id="_BkMc0O3nEei4qKOdOry_yA" name="endTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
+        <parameters xmi:id="_OvwlkO3vEeiRHvV3GzBKNQ" name="methodName" type="_WRDKuexYEei5bMiJMVAJVA"/>
+        <parameters xmi:id="_8SOz8O3mEei4qKOdOry_yA" name="diffTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
       </operations>
       <attributes xmi:id="_RPTnwOxbEei5bMiJMVAJVA" name="startTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
       <attributes xmi:id="_Sc-UwOxbEei5bMiJMVAJVA" name="endTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
@@ -22,13 +22,38 @@
     <types xsi:type="ram:RLong" xmi:id="_WRDKvOxYEei5bMiJMVAJVA"/>
     <types xsi:type="ram:RByte" xmi:id="_WRDKvexYEei5bMiJMVAJVA"/>
   </structuralView>
+  <messageViews xsi:type="ram:MessageView" xmi:id="_SfrpY-3uEeiRHvV3GzBKNQ" specifies="_6WQ2gO3mEei4qKOdOry_yA">
+    <specification xmi:id="_SfrpZO3uEeiRHvV3GzBKNQ">
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_SfrpZe3uEeiRHvV3GzBKNQ" covered="_SfrpZ-3uEeiRHvV3GzBKNQ" message="_SfrpaO3uEeiRHvV3GzBKNQ"/>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_BFWrEO3vEeiRHvV3GzBKNQ" covered="_SfrpZ-3uEeiRHvV3GzBKNQ">
+        <assignTo xsi:type="ram:Attribute" href="Logging.ram#_5fQ3wO0PEei3bermciyb1g"/>
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_BFWrEe3vEeiRHvV3GzBKNQ" body="methodName + &quot; has executed on object &quot; + this.constructor.name + &quot; in &quot; +  diffTime + &quot; ns&quot;" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_SfrpZu3uEeiRHvV3GzBKNQ" covered="_SfrpZ-3uEeiRHvV3GzBKNQ" message="_Sfrpae3uEeiRHvV3GzBKNQ"/>
+      <lifelines xmi:id="_SfrpZ-3uEeiRHvV3GzBKNQ" represents="_Sfrpau3uEeiRHvV3GzBKNQ" coveredBy="_SfrpZe3uEeiRHvV3GzBKNQ _SfrpZu3uEeiRHvV3GzBKNQ _BFWrEO3vEeiRHvV3GzBKNQ"/>
+      <messages xmi:id="_SfrpaO3uEeiRHvV3GzBKNQ" sendEvent="_Sfrpa-3uEeiRHvV3GzBKNQ" receiveEvent="_SfrpZe3uEeiRHvV3GzBKNQ" signature="_6WQ2gO3mEei4qKOdOry_yA"/>
+      <messages xmi:id="_Sfrpae3uEeiRHvV3GzBKNQ" sendEvent="_SfrpZu3uEeiRHvV3GzBKNQ" receiveEvent="_SfrpbO3uEeiRHvV3GzBKNQ" signature="_6WQ2gO3mEei4qKOdOry_yA" messageSort="reply">
+        <returns xsi:type="ram:StructuralFeatureValue" xmi:id="_rwAosO3vEeiRHvV3GzBKNQ">
+          <value xsi:type="ram:Attribute" href="Logging.ram#_5fQ3wO0PEei3bermciyb1g"/>
+        </returns>
+      </messages>
+      <properties xmi:id="_Sfrpau3uEeiRHvV3GzBKNQ" name="target" lowerBound="1" type="_WRDKsuxYEei5bMiJMVAJVA"/>
+      <formalGates xmi:id="_Sfrpa-3uEeiRHvV3GzBKNQ" message="_SfrpaO3uEeiRHvV3GzBKNQ" name="in_getLogExecutionWithTimeMsg"/>
+      <formalGates xmi:id="_SfrpbO3uEeiRHvV3GzBKNQ" message="_Sfrpae3uEeiRHvV3GzBKNQ" name="out_getLogExecutionWithTimeMsg"/>
+    </specification>
+  </messageViews>
   <instantiations xmi:id="_WRDKvuxYEei5bMiJMVAJVA">
     <source xsi:type="ram:Aspect" href="Log%20Execution.ram#_dvrm0OxVEei5bMiJMVAJVA"/>
   </instantiations>
   <layout xmi:id="_WRDKv-xYEei5bMiJMVAJVA">
     <containers xmi:id="_WRDKwOxYEei5bMiJMVAJVA" key="_WRDKsexYEei5bMiJMVAJVA">
       <value xmi:id="_WRDKwexYEei5bMiJMVAJVA" key="_WRDKsuxYEei5bMiJMVAJVA">
-        <value xmi:id="_WRDKwuxYEei5bMiJMVAJVA" x="399.00012" y="262.0"/>
+        <value xmi:id="_WRDKwuxYEei5bMiJMVAJVA" x="389.00012" y="257.0"/>
+      </value>
+    </containers>
+    <containers xmi:id="_SfrpYO3uEeiRHvV3GzBKNQ" key="_SfrpY-3uEeiRHvV3GzBKNQ">
+      <value xmi:id="_SfrpYe3uEeiRHvV3GzBKNQ" key="_SfrpZ-3uEeiRHvV3GzBKNQ">
+        <value xmi:id="_SfrpYu3uEeiRHvV3GzBKNQ" x="100.0" y="100.0"/>
       </value>
     </containers>
   </layout>

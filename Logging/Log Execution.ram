@@ -4,7 +4,9 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_dvrm0exVEei5bMiJMVAJVA">
     <classes xsi:type="ram:Class" xmi:id="_dvrm0uxVEei5bMiJMVAJVA" name="Loggable" partiality="public" visibility="public">
-      <operations xmi:id="_rF6R4O3mEei4qKOdOry_yA" name="getLogExecutionMsg" visibility="public" returnType="_dvrm2exVEei5bMiJMVAJVA"/>
+      <operations xmi:id="_rF6R4O3mEei4qKOdOry_yA" name="getLogExecutionMsg" visibility="public" returnType="_dvrm2exVEei5bMiJMVAJVA">
+        <parameters xmi:id="_L5RLgO3tEeiRHvV3GzBKNQ" name="methodName" type="_dvrm2exVEei5bMiJMVAJVA"/>
+      </operations>
     </classes>
     <types xsi:type="ram:RVoid" xmi:id="_dvrm1OxVEei5bMiJMVAJVA"/>
     <types xsi:type="ram:RAny" xmi:id="_dvrm1exVEei5bMiJMVAJVA"/>
@@ -17,6 +19,26 @@
     <types xsi:type="ram:RLong" xmi:id="_dvrm3OxVEei5bMiJMVAJVA"/>
     <types xsi:type="ram:RByte" xmi:id="_dvrm3exVEei5bMiJMVAJVA"/>
   </structuralView>
+  <messageViews xsi:type="ram:MessageView" xmi:id="__ac6Y-3sEeiRHvV3GzBKNQ" specifies="_rF6R4O3mEei4qKOdOry_yA">
+    <specification xmi:id="__ac6ZO3sEeiRHvV3GzBKNQ">
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="__ac6Ze3sEeiRHvV3GzBKNQ" covered="__ac6Z-3sEeiRHvV3GzBKNQ" message="__ac6aO3sEeiRHvV3GzBKNQ"/>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_RZfS0O3tEeiRHvV3GzBKNQ" covered="__ac6Z-3sEeiRHvV3GzBKNQ">
+        <assignTo xsi:type="ram:Attribute" href="Logging.ram#_5fQ3wO0PEei3bermciyb1g"/>
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_RZf54O3tEeiRHvV3GzBKNQ" body="methodName + &quot;has executed and object&quot; + this.constructor.name" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="__ac6Zu3sEeiRHvV3GzBKNQ" covered="__ac6Z-3sEeiRHvV3GzBKNQ" message="__ac6ae3sEeiRHvV3GzBKNQ"/>
+      <lifelines xmi:id="__ac6Z-3sEeiRHvV3GzBKNQ" represents="__ac6au3sEeiRHvV3GzBKNQ" coveredBy="__ac6Ze3sEeiRHvV3GzBKNQ __ac6Zu3sEeiRHvV3GzBKNQ _RZfS0O3tEeiRHvV3GzBKNQ"/>
+      <messages xmi:id="__ac6aO3sEeiRHvV3GzBKNQ" sendEvent="__ac6a-3sEeiRHvV3GzBKNQ" receiveEvent="__ac6Ze3sEeiRHvV3GzBKNQ" signature="_rF6R4O3mEei4qKOdOry_yA"/>
+      <messages xmi:id="__ac6ae3sEeiRHvV3GzBKNQ" sendEvent="__ac6Zu3sEeiRHvV3GzBKNQ" receiveEvent="__ac6bO3sEeiRHvV3GzBKNQ" signature="_rF6R4O3mEei4qKOdOry_yA" messageSort="reply">
+        <returns xsi:type="ram:StructuralFeatureValue" xmi:id="_o5tb4O3tEeiRHvV3GzBKNQ">
+          <value xsi:type="ram:Attribute" href="Logging.ram#_5fQ3wO0PEei3bermciyb1g"/>
+        </returns>
+      </messages>
+      <properties xmi:id="__ac6au3sEeiRHvV3GzBKNQ" name="target" lowerBound="1" type="_dvrm0uxVEei5bMiJMVAJVA"/>
+      <formalGates xmi:id="__ac6a-3sEeiRHvV3GzBKNQ" message="__ac6aO3sEeiRHvV3GzBKNQ" name="in_getLogExecutionMsg"/>
+      <formalGates xmi:id="__ac6bO3sEeiRHvV3GzBKNQ" message="__ac6ae3sEeiRHvV3GzBKNQ" name="out_getLogExecutionMsg"/>
+    </specification>
+  </messageViews>
   <instantiations xmi:id="_dvrm3uxVEei5bMiJMVAJVA">
     <source xsi:type="ram:Aspect" href="Logging.ram#_0tSx4OwwEeiquolpRP0ulg"/>
   </instantiations>
@@ -24,6 +46,11 @@
     <containers xmi:id="_dvrm4OxVEei5bMiJMVAJVA" key="_dvrm0exVEei5bMiJMVAJVA">
       <value xmi:id="_dvrm4exVEei5bMiJMVAJVA" key="_dvrm0uxVEei5bMiJMVAJVA">
         <value xmi:id="_dvrm4uxVEei5bMiJMVAJVA" x="355.9999" y="230.99976"/>
+      </value>
+    </containers>
+    <containers xmi:id="__ac6YO3sEeiRHvV3GzBKNQ" key="__ac6Y-3sEeiRHvV3GzBKNQ">
+      <value xmi:id="__ac6Ye3sEeiRHvV3GzBKNQ" key="__ac6Z-3sEeiRHvV3GzBKNQ">
+        <value xmi:id="__ac6Yu3sEeiRHvV3GzBKNQ" x="100.0" y="100.0"/>
       </value>
     </containers>
   </layout>

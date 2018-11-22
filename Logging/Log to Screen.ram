@@ -32,7 +32,6 @@
       <operations xmi:id="_U5iy0O3lEei4qKOdOry_yA" name="logToConsole" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA">
         <parameters xmi:id="_Kg2EMO3mEei4qKOdOry_yA" name="msg" type="_R9mnSexSEei5bMiJMVAJVA"/>
       </operations>
-      <operations xmi:id="_YpSToO3oEei0ZPZHYxifaQ" name="enable" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA"/>
       <associationEnds xmi:id="_nt7SMO0REei3bermciyb1g" name="myLoggable" lowerBound="1" navigable="false" assoc="_nt7SMe0REei3bermciyb1g"/>
     </classes>
     <associations xmi:id="_nt7SMe0REei3bermciyb1g" name="Loggable_ConsoleLogger" ends="_nt6rIO0REei3bermciyb1g _nt7SMO0REei3bermciyb1g"/>
@@ -47,6 +46,21 @@
     <types xsi:type="ram:RLong" xmi:id="_R9mnTOxSEei5bMiJMVAJVA"/>
     <types xsi:type="ram:RByte" xmi:id="_R9mnTexSEei5bMiJMVAJVA"/>
   </structuralView>
+  <messageViews xsi:type="ram:MessageView" xmi:id="_AcFocu3rEeiRHvV3GzBKNQ" specifies="_U5iy0O3lEei4qKOdOry_yA">
+    <specification xmi:id="_AcFoc-3rEeiRHvV3GzBKNQ">
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_AcFodO3rEeiRHvV3GzBKNQ" covered="_AcFodu3rEeiRHvV3GzBKNQ" message="_AcFod-3rEeiRHvV3GzBKNQ"/>
+      <fragments xsi:type="ram:ExecutionStatement" xmi:id="_A6SnYO3rEeiRHvV3GzBKNQ" covered="_AcFodu3rEeiRHvV3GzBKNQ">
+        <specification xsi:type="ram:OpaqueExpression" xmi:id="_A6SnYe3rEeiRHvV3GzBKNQ" body="System.out.println(msg)" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_AcFode3rEeiRHvV3GzBKNQ" covered="_AcFodu3rEeiRHvV3GzBKNQ" message="_AcFoeO3rEeiRHvV3GzBKNQ"/>
+      <lifelines xmi:id="_AcFodu3rEeiRHvV3GzBKNQ" represents="_AcFoee3rEeiRHvV3GzBKNQ" coveredBy="_AcFodO3rEeiRHvV3GzBKNQ _AcFode3rEeiRHvV3GzBKNQ _A6SnYO3rEeiRHvV3GzBKNQ"/>
+      <messages xmi:id="_AcFod-3rEeiRHvV3GzBKNQ" sendEvent="_AcFoeu3rEeiRHvV3GzBKNQ" receiveEvent="_AcFodO3rEeiRHvV3GzBKNQ" signature="_U5iy0O3lEei4qKOdOry_yA"/>
+      <messages xmi:id="_AcFoeO3rEeiRHvV3GzBKNQ" sendEvent="_AcFode3rEeiRHvV3GzBKNQ" receiveEvent="_AcFoe-3rEeiRHvV3GzBKNQ" signature="_U5iy0O3lEei4qKOdOry_yA" messageSort="reply"/>
+      <properties xmi:id="_AcFoee3rEeiRHvV3GzBKNQ" name="target" lowerBound="1" type="_d_v8sO0REei3bermciyb1g"/>
+      <formalGates xmi:id="_AcFoeu3rEeiRHvV3GzBKNQ" message="_AcFod-3rEeiRHvV3GzBKNQ" name="in_logToConsole"/>
+      <formalGates xmi:id="_AcFoe-3rEeiRHvV3GzBKNQ" message="_AcFoeO3rEeiRHvV3GzBKNQ" name="out_logToConsole"/>
+    </specification>
+  </messageViews>
   <instantiations xmi:id="_R9mnTuxSEei5bMiJMVAJVA">
     <source xsi:type="ram:Aspect" href="Logging.ram#_0tSx4OwwEeiquolpRP0ulg"/>
   </instantiations>
@@ -57,6 +71,11 @@
       </value>
       <value xmi:id="_d_xK0O0REei3bermciyb1g" key="_d_v8sO0REei3bermciyb1g">
         <value xmi:id="_d_xK0e0REei3bermciyb1g" x="362.0" y="416.99985"/>
+      </value>
+    </containers>
+    <containers xmi:id="_AcFBYO3rEeiRHvV3GzBKNQ" key="_AcFocu3rEeiRHvV3GzBKNQ">
+      <value xmi:id="_AcFocO3rEeiRHvV3GzBKNQ" key="_AcFodu3rEeiRHvV3GzBKNQ">
+        <value xmi:id="_AcFoce3rEeiRHvV3GzBKNQ" x="100.0" y="100.0"/>
       </value>
     </containers>
   </layout>
