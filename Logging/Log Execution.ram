@@ -23,15 +23,15 @@
     <specification xmi:id="__ac6ZO3sEeiRHvV3GzBKNQ">
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="__ac6Ze3sEeiRHvV3GzBKNQ" covered="__ac6Z-3sEeiRHvV3GzBKNQ" message="__ac6aO3sEeiRHvV3GzBKNQ"/>
       <fragments xsi:type="ram:AssignmentStatement" xmi:id="_RZfS0O3tEeiRHvV3GzBKNQ" covered="__ac6Z-3sEeiRHvV3GzBKNQ">
-        <assignTo xsi:type="ram:Attribute" href="Logging.ram#_5fQ3wO0PEei3bermciyb1g"/>
-        <value xsi:type="ram:OpaqueExpression" xmi:id="_RZf54O3tEeiRHvV3GzBKNQ" body="methodName + &quot;has executed and object&quot; + this.constructor.name" language="java"/>
+        <assignTo xsi:type="ram:Attribute" href="Logging.ram#_pdQIoO3_EeiwuqYpoaM2iA"/>
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_RZf54O3tEeiRHvV3GzBKNQ" body="methodName + &quot;has executed on object&quot; + this.constructor.name" language="java"/>
       </fragments>
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="__ac6Zu3sEeiRHvV3GzBKNQ" covered="__ac6Z-3sEeiRHvV3GzBKNQ" message="__ac6ae3sEeiRHvV3GzBKNQ"/>
       <lifelines xmi:id="__ac6Z-3sEeiRHvV3GzBKNQ" represents="__ac6au3sEeiRHvV3GzBKNQ" coveredBy="__ac6Ze3sEeiRHvV3GzBKNQ __ac6Zu3sEeiRHvV3GzBKNQ _RZfS0O3tEeiRHvV3GzBKNQ"/>
       <messages xmi:id="__ac6aO3sEeiRHvV3GzBKNQ" sendEvent="__ac6a-3sEeiRHvV3GzBKNQ" receiveEvent="__ac6Ze3sEeiRHvV3GzBKNQ" signature="_rF6R4O3mEei4qKOdOry_yA"/>
       <messages xmi:id="__ac6ae3sEeiRHvV3GzBKNQ" sendEvent="__ac6Zu3sEeiRHvV3GzBKNQ" receiveEvent="__ac6bO3sEeiRHvV3GzBKNQ" signature="_rF6R4O3mEei4qKOdOry_yA" messageSort="reply">
-        <returns xsi:type="ram:StructuralFeatureValue" xmi:id="_o5tb4O3tEeiRHvV3GzBKNQ">
-          <value xsi:type="ram:Attribute" href="Logging.ram#_5fQ3wO0PEei3bermciyb1g"/>
+        <returns xsi:type="ram:StructuralFeatureValue" xmi:id="_V0260O4BEeicXfEn0ML3YA">
+          <value xsi:type="ram:Attribute" href="Logging.ram#_pdQIoO3_EeiwuqYpoaM2iA"/>
         </returns>
       </messages>
       <properties xmi:id="__ac6au3sEeiRHvV3GzBKNQ" name="target" lowerBound="1" type="_dvrm0uxVEei5bMiJMVAJVA"/>

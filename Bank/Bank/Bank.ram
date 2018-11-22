@@ -414,6 +414,15 @@
     </compositions>
     <reuse href="Bank.core#_xwSIEL0mEeiuha-UdeUxLQ"/>
   </modelReuses>
+  <modelReuses xmi:id="_97-50O4DEeicXfEn0ML3YA">
+    <compositions xsi:type="ram:Instantiation" xmi:id="_97-50e4DEeicXfEn0ML3YA">
+      <source xsi:type="ram:Aspect" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_9772gO4DEeicXfEn0ML3YA"/>
+      <mappings xsi:type="ram:ClassifierMapping" xmi:id="_-oR_IO4DEeicXfEn0ML3YA" to="_sQCtELp9EeiBEfOlEucTtg">
+        <from xsi:type="ram:Class" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_9772gu4DEeicXfEn0ML3YA"/>
+      </mappings>
+    </compositions>
+    <reuse href="Bank.core#_98AH8O4DEeicXfEn0ML3YA"/>
+  </modelReuses>
   <realizes href="Bank.core#_rDCucbp9EeiBEfOlEucTtg"/>
   <coreConcern href="Bank.core#_rDCHYLp9EeiBEfOlEucTtg"/>
   <structuralView xmi:id="_r7ojUbp9EeiBEfOlEucTtg">
@@ -885,7 +894,7 @@
           <fragments xsi:type="ram:ExecutionStatement" xmi:id="_OZ7jgLp-EeiBEfOlEucTtg" covered="_FY62B7p-EeiBEfOlEucTtg">
             <specification xsi:type="ram:OpaqueExpression" xmi:id="_OZ7jgbp-EeiBEfOlEucTtg" body="throw nefException" language="java"/>
           </fragments>
-          <interactionConstraint xsi:type="ram:OpaqueExpression" xmi:id="_JXQT0bp-EeiBEfOlEucTtg" language="java"/>
+          <interactionConstraint xsi:type="ram:OpaqueExpression" xmi:id="_JXQT0bp-EeiBEfOlEucTtg" body="balanceinCents &lt;= amount" language="java"/>
         </operands>
       </fragments>
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_FY62Brp-EeiBEfOlEucTtg" covered="_FY62B7p-EeiBEfOlEucTtg" message="_FY62Cbp-EeiBEfOlEucTtg"/>

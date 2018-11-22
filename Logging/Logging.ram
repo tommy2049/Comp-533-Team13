@@ -4,10 +4,7 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_0tWcQOwwEeiquolpRP0ulg">
     <classes xsi:type="ram:Class" xmi:id="_0tYRdOwwEeiquolpRP0ulg" name="Loggable" partiality="public" visibility="public" abstract="true">
-      <operations xmi:id="_Th89kO0QEei3bermciyb1g" name="enable" visibility="public" returnType="_0tZfmOwwEeiquolpRP0ulg"/>
-      <operations xmi:id="_X_dDoO0QEei3bermciyb1g" name="disable" visibility="public" returnType="_0tZfmOwwEeiquolpRP0ulg"/>
-      <attributes xmi:id="_4h8T4O0PEei3bermciyb1g" name="enabled" type="_0taGoOwwEeiquolpRP0ulg"/>
-      <attributes xmi:id="_5fQ3wO0PEei3bermciyb1g" name="msg" type="_0taGo-wwEeiquolpRP0ulg"/>
+      <attributes xmi:id="_pdQIoO3_EeiwuqYpoaM2iA" name="msg" type="_0taGo-wwEeiquolpRP0ulg"/>
     </classes>
     <types xsi:type="ram:RVoid" xmi:id="_0tZfmOwwEeiquolpRP0ulg"/>
     <types xsi:type="ram:RAny" xmi:id="_0tZfmewwEeiquolpRP0ulg"/>
