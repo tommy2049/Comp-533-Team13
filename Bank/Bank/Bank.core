@@ -212,16 +212,16 @@
           <selected href="Reused_Association/Association.core#_mZ_PsQCWEeWTy6SkLveZ6w"/>
         </configurations>
       </reuses>
-      <reuses xmi:id="_98AH8O4DEeicXfEn0ML3YA" name="Logging" selectedConfiguration="_98AH8e4DEeicXfEn0ML3YA">
+      <reuses xmi:id="_H9U0MO4KEeicXfEn0ML3YA" name="Logging" selectedConfiguration="_H9U0Me4KEeicXfEn0ML3YA">
         <reusedConcern href="Reused_Logging/Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
-        <configurations xmi:id="_98AH8e4DEeicXfEn0ML3YA" name="Logging_Log to ScreenLog Operation ExecutionLog to FileLog with TimeLoggingLog Destination" reuse="_98AH8O4DEeicXfEn0ML3YA">
+        <configurations xmi:id="_H9U0Me4KEeicXfEn0ML3YA" name="Logging_Log Operation ExecutionLog to FileLog with TimeLog to ScreenLog DestinationLogging" reuse="_H9U0MO4KEeicXfEn0ML3YA">
           <source xsi:type="core:COREFeatureModel" href="Reused_Logging/Logging.core#_zOhncOwoEeiquolpRP0ulg"/>
-          <selected href="Reused_Logging/Logging.core#_G3WoMOwpEeiquolpRP0ulg"/>
           <selected href="Reused_Logging/Logging.core#_XV8hkOwpEeiquolpRP0ulg"/>
           <selected href="Reused_Logging/Logging.core#_IhSacOwpEeiquolpRP0ulg"/>
           <selected href="Reused_Logging/Logging.core#_aht6AOwpEeiquolpRP0ulg"/>
-          <selected href="Reused_Logging/Logging.core#_zOhncewoEeiquolpRP0ulg"/>
+          <selected href="Reused_Logging/Logging.core#_G3WoMOwpEeiquolpRP0ulg"/>
           <selected href="Reused_Logging/Logging.core#_94kvUOwoEeiquolpRP0ulg"/>
+          <selected href="Reused_Logging/Logging.core#_zOhncewoEeiquolpRP0ulg"/>
         </configurations>
       </reuses>
     </features>

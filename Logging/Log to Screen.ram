@@ -58,7 +58,7 @@
           <fragments xsi:type="ram:ExecutionStatement" xmi:id="_DzadsO34EeiRHvV3GzBKNQ" covered="_AcFodu3rEeiRHvV3GzBKNQ">
             <specification xsi:type="ram:OpaqueExpression" xmi:id="_Dzadse34EeiRHvV3GzBKNQ" body="System.out.println(msg)" language="java"/>
           </fragments>
-          <interactionConstraint xsi:type="ram:OpaqueExpression" xmi:id="_vBP2Uu33EeiRHvV3GzBKNQ" body="if enabled" language="java"/>
+          <interactionConstraint xsi:type="ram:OpaqueExpression" xmi:id="_vBP2Uu33EeiRHvV3GzBKNQ" body="enabled" language="java"/>
         </operands>
       </fragments>
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_AcFode3rEeiRHvV3GzBKNQ" covered="_AcFodu3rEeiRHvV3GzBKNQ" message="_AcFoeO3rEeiRHvV3GzBKNQ"/>
