@@ -4,9 +4,7 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_WRDKsexYEei5bMiJMVAJVA">
     <classes xsi:type="ram:Class" xmi:id="_WRDKsuxYEei5bMiJMVAJVA" name="Loggable" partiality="public" visibility="public">
-      <operations xmi:id="_6WQ2gO3mEei4qKOdOry_yA" name="getLogOfOperationExecutionWithTime" partiality="public" visibility="public" returnType="_WRDKtexYEei5bMiJMVAJVA">
-        <parameters xmi:id="_OvwlkO3vEeiRHvV3GzBKNQ" name="methodName" type="_WRDKuexYEei5bMiJMVAJVA"/>
-      </operations>
+      <operations xmi:id="_6WQ2gO3mEei4qKOdOry_yA" name="getLogOfOperationExecutionWithTime" partiality="public" visibility="public" returnType="_WRDKtexYEei5bMiJMVAJVA"/>
       <attributes xmi:id="_RPTnwOxbEei5bMiJMVAJVA" name="startTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
       <attributes xmi:id="_Sc-UwOxbEei5bMiJMVAJVA" name="endTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
     </classes>
@@ -50,22 +48,41 @@
   <messageViews xsi:type="ram:AspectMessageView" xmi:id="_2OJjA-7VEeiJqKmmcpmnQQ" name="LogOpExecutionTime" pointcut="_6WQ2gO3mEei4qKOdOry_yA">
     <advice xmi:id="_2OJjBO7VEeiJqKmmcpmnQQ">
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_2OJjBe7VEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ" message="_2OJjCe7VEeiJqKmmcpmnQQ"/>
-      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_3esk4O7VEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ" assignTo="_RPTnwOxbEei5bMiJMVAJVA">
-        <value xsi:type="ram:OpaqueExpression" xmi:id="_3esk4e7VEeiJqKmmcpmnQQ" body="System.nanoTime()" language="java"/>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_Y7yogO9fEeiRQOXEbZ4nAg" covered="_2OJjCO7VEeiJqKmmcpmnQQ" assignTo="_S-qXMO9pEeiqC93qYwHr6g">
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_Y7yoge9fEeiRQOXEbZ4nAg" body="System.nanoTime()" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:ExecutionStatement" xmi:id="_8vGjwO9zEeiqC93qYwHr6g" covered="_2OJjCO7VEeiJqKmmcpmnQQ">
+        <specification xsi:type="ram:OpaqueExpression" xmi:id="_8vGjwe9zEeiqC93qYwHr6g" body="StackTraceElement[] stackTrace = Thread.currentThread().getName()" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_Q2UwsO90EeiqC93qYwHr6g" covered="_2OJjCO7VEeiJqKmmcpmnQQ" assignTo="_Rl2JIO90EeiqC93qYwHr6g">
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_Q2Uwse90EeiqC93qYwHr6g" body="stackTrace[1].getMethodName()" language="java"/>
       </fragments>
       <fragments xsi:type="ram:OriginalBehaviorExecution" xmi:id="_2OJjBu7VEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ"/>
-      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_04wn8O7WEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ" assignTo="_Sc-UwOxbEei5bMiJMVAJVA">
-        <value xsi:type="ram:OpaqueExpression" xmi:id="_04wn8e7WEeiJqKmmcpmnQQ" body="System.nanoTime()" language="java"/>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_bK-c4O9fEeiRQOXEbZ4nAg" covered="_2OJjCO7VEeiJqKmmcpmnQQ" assignTo="_QyrAwO9pEeiqC93qYwHr6g">
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_bK-c4e9fEeiRQOXEbZ4nAg" body="System.nanoTime()" language="java"/>
       </fragments>
-      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_4tIRcO7WEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ">
-        <assignTo xsi:type="ram:Attribute" href="Logging.ram#_pdQIoO3_EeiwuqYpoaM2iA"/>
-        <value xsi:type="ram:OpaqueExpression" xmi:id="_4tIRce7WEeiJqKmmcpmnQQ" body="methodName + &quot; has executed on object &quot;  + this + &quot; in &quot; + (endTime - startTime) + &quot; ns&quot;" language="java"/>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_4tIRcO7WEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ" assignTo="_Hg-y8O9pEeiqC93qYwHr6g">
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_4tIRce7WEeiJqKmmcpmnQQ" body="callingMethod + &quot; has executed on object &quot;  + this + &quot; in &quot; + (end - start) + &quot; ns&quot;" language="java"/>
       </fragments>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_vs2QYO9dEeiRQOXEbZ4nAg" covered="_2OJjCO7VEeiJqKmmcpmnQQ" message="_vs23cO9dEeiRQOXEbZ4nAg"/>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_vs2QYe9dEeiRQOXEbZ4nAg" covered="_2OJjCO7VEeiJqKmmcpmnQQ" message="_vs23cO9dEeiRQOXEbZ4nAg"/>
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_2OJjB-7VEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ" message="_2OJjCu7VEeiJqKmmcpmnQQ"/>
-      <lifelines xmi:id="_2OJjCO7VEeiJqKmmcpmnQQ" represents="_2OJjC-7VEeiJqKmmcpmnQQ" coveredBy="_2OJjBe7VEeiJqKmmcpmnQQ _2OJjB-7VEeiJqKmmcpmnQQ _2OJjBu7VEeiJqKmmcpmnQQ _3esk4O7VEeiJqKmmcpmnQQ _04wn8O7WEeiJqKmmcpmnQQ _4tIRcO7WEeiJqKmmcpmnQQ"/>
-      <messages xmi:id="_2OJjCe7VEeiJqKmmcpmnQQ" sendEvent="_2OJjDO7VEeiJqKmmcpmnQQ" receiveEvent="_2OJjBe7VEeiJqKmmcpmnQQ" signature="_6WQ2gO3mEei4qKOdOry_yA"/>
+      <lifelines xmi:id="_2OJjCO7VEeiJqKmmcpmnQQ" represents="_2OJjC-7VEeiJqKmmcpmnQQ" coveredBy="_2OJjBe7VEeiJqKmmcpmnQQ _2OJjB-7VEeiJqKmmcpmnQQ _2OJjBu7VEeiJqKmmcpmnQQ _vs2QYe9dEeiRQOXEbZ4nAg _vs2QYO9dEeiRQOXEbZ4nAg _4tIRcO7WEeiJqKmmcpmnQQ _bK-c4O9fEeiRQOXEbZ4nAg _Y7yogO9fEeiRQOXEbZ4nAg _8vGjwO9zEeiqC93qYwHr6g _Q2UwsO90EeiqC93qYwHr6g"/>
+      <messages xmi:id="_2OJjCe7VEeiJqKmmcpmnQQ" sendEvent="_2OJjDO7VEeiJqKmmcpmnQQ" receiveEvent="_2OJjBe7VEeiJqKmmcpmnQQ" signature="_6WQ2gO3mEei4qKOdOry_yA">
+        <localProperties xsi:type="ram:Attribute" xmi:id="_Hg-y8O9pEeiqC93qYwHr6g" name="msg" type="_WRDKuexYEei5bMiJMVAJVA"/>
+        <localProperties xsi:type="ram:Attribute" xmi:id="_QyrAwO9pEeiqC93qYwHr6g" name="end" type="_WRDKvOxYEei5bMiJMVAJVA"/>
+        <localProperties xsi:type="ram:Attribute" xmi:id="_S-qXMO9pEeiqC93qYwHr6g" name="start" type="_WRDKvOxYEei5bMiJMVAJVA"/>
+        <localProperties xsi:type="ram:Attribute" xmi:id="_Rl2JIO90EeiqC93qYwHr6g" name="callingMethod" type="_WRDKuexYEei5bMiJMVAJVA"/>
+      </messages>
       <messages xmi:id="_2OJjCu7VEeiJqKmmcpmnQQ" sendEvent="_2OJjB-7VEeiJqKmmcpmnQQ" receiveEvent="_2OJjDe7VEeiJqKmmcpmnQQ" signature="_6WQ2gO3mEei4qKOdOry_yA" messageSort="reply">
         <returns xsi:type="ram:LiteralNull" xmi:id="_mRWjkO7fEei_DNyqFfK4Ag"/>
+      </messages>
+      <messages xmi:id="_vs23cO9dEeiRQOXEbZ4nAg" sendEvent="_vs2QYO9dEeiRQOXEbZ4nAg" receiveEvent="_vs2QYe9dEeiRQOXEbZ4nAg">
+        <signature href="Logging.ram#_h2yHMO9XEeid_8KoOHeZBQ"/>
+        <arguments xmi:id="_vs23ce9dEeiRQOXEbZ4nAg">
+          <parameter href="Logging.ram#_jsqDsO9XEeid_8KoOHeZBQ"/>
+          <value xsi:type="ram:StructuralFeatureValue" xmi:id="_JmPPQO9pEeiqC93qYwHr6g" value="_Hg-y8O9pEeiqC93qYwHr6g"/>
+        </arguments>
       </messages>
       <properties xmi:id="_2OJjC-7VEeiJqKmmcpmnQQ" name="target" lowerBound="1" type="_WRDKsuxYEei5bMiJMVAJVA"/>
       <formalGates xmi:id="_2OJjDO7VEeiJqKmmcpmnQQ" message="_2OJjCe7VEeiJqKmmcpmnQQ" name="in_getLogOfOperationExecutionWithTime"/>

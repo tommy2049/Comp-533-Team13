@@ -4,6 +4,9 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_0tWcQOwwEeiquolpRP0ulg">
     <classes xsi:type="ram:Class" xmi:id="_0tYRdOwwEeiquolpRP0ulg" name="Loggable" partiality="public" visibility="public" abstract="true">
+      <operations xmi:id="_h2yHMO9XEeid_8KoOHeZBQ" name="log" visibility="public" returnType="_0tZfmOwwEeiquolpRP0ulg">
+        <parameters xmi:id="_jsqDsO9XEeid_8KoOHeZBQ" name="msg" type="_0taGo-wwEeiquolpRP0ulg"/>
+      </operations>
       <attributes xmi:id="_pdQIoO3_EeiwuqYpoaM2iA" name="stringToLog" type="_0taGo-wwEeiquolpRP0ulg"/>
     </classes>
     <types xsi:type="ram:RVoid" xmi:id="_0tZfmOwwEeiquolpRP0ulg"/>

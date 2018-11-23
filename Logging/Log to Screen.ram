@@ -22,6 +22,7 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_R9mnQexSEei5bMiJMVAJVA">
     <classes xsi:type="ram:Class" xmi:id="_R9mnQuxSEei5bMiJMVAJVA" name="Loggable" partiality="public" visibility="public">
+      <operations xmi:id="_iPgvQO9iEeiK88s85cIiXw" name="create" partiality="public" visibility="public" returnType="_R9mnQuxSEei5bMiJMVAJVA" operationType="Constructor"/>
       <operations xmi:id="_sSJrUO0REei3bermciyb1g" name="getMyConsoleLogger" extendedVisibility="package" returnType="_d_v8sO0REei3bermciyb1g"/>
       <operations xmi:id="_sSKSYO0REei3bermciyb1g" name="setMyConsoleLogger" extendedVisibility="package" returnType="_R9mnRuxSEei5bMiJMVAJVA">
         <parameters xmi:id="_sSKSYe0REei3bermciyb1g" name="newObject" type="_d_v8sO0REei3bermciyb1g"/>
@@ -29,13 +30,15 @@
       <operations xmi:id="_CG4aoO7NEeiJqKmmcpmnQQ" name="isConsoleLoggingEnabled" visibility="public" returnType="_R9mnRuxSEei5bMiJMVAJVA"/>
       <operations xmi:id="_VGXjcO7NEeiJqKmmcpmnQQ" name="enableConsoleLogging" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA"/>
       <operations xmi:id="_rpAp8O7NEeiJqKmmcpmnQQ" name="disableConsoleLogging" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA"/>
+      <operations xmi:id="_8O8twO9XEeid_8KoOHeZBQ" name="log" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA">
+        <parameters xmi:id="_8O8twe9XEeid_8KoOHeZBQ" name="msg" type="_R9mnSexSEei5bMiJMVAJVA"/>
+      </operations>
       <associationEnds xmi:id="_nt6rIO0REei3bermciyb1g" name="myConsoleLogger" lowerBound="1" assoc="_nt7SMe0REei3bermciyb1g" featureSelection="_sSIdMO0REei3bermciyb1g"/>
       <attributes xmi:id="_3eBlkO7MEeiJqKmmcpmnQQ" name="consoleLoggingEnabled" type="_R9mnRuxSEei5bMiJMVAJVA"/>
     </classes>
     <classes xsi:type="ram:Class" xmi:id="_d_v8sO0REei3bermciyb1g" name="ConsoleLogger" visibility="public">
       <operations xmi:id="_U5iy0O3lEei4qKOdOry_yA" name="logToConsole" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA">
         <parameters xmi:id="_Kg2EMO3mEei4qKOdOry_yA" name="toLog" type="_R9mnSexSEei5bMiJMVAJVA"/>
-        <parameters xmi:id="_wE2zEO7hEeiD7NPjIUnPHw" name="enabled" type="_R9mnRuxSEei5bMiJMVAJVA"/>
       </operations>
       <associationEnds xmi:id="_nt7SMO0REei3bermciyb1g" name="myLoggable" lowerBound="1" navigable="false" assoc="_nt7SMe0REei3bermciyb1g"/>
     </classes>
@@ -54,16 +57,11 @@
   <messageViews xsi:type="ram:MessageView" xmi:id="_AcFocu3rEeiRHvV3GzBKNQ" specifies="_U5iy0O3lEei4qKOdOry_yA">
     <specification xmi:id="_AcFoc-3rEeiRHvV3GzBKNQ">
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_AcFodO3rEeiRHvV3GzBKNQ" covered="_AcFodu3rEeiRHvV3GzBKNQ" message="_AcFod-3rEeiRHvV3GzBKNQ"/>
-      <fragments xsi:type="ram:CombinedFragment" xmi:id="_0JRqwO7hEeiD7NPjIUnPHw" covered="_AcFodu3rEeiRHvV3GzBKNQ" interactionOperator="opt">
-        <operands xmi:id="_0JRqwe7hEeiD7NPjIUnPHw">
-          <fragments xsi:type="ram:ExecutionStatement" xmi:id="__Sfa4O7hEeiD7NPjIUnPHw" covered="_AcFodu3rEeiRHvV3GzBKNQ">
-            <specification xsi:type="ram:OpaqueExpression" xmi:id="__Sfa4e7hEeiD7NPjIUnPHw" body="System.out.println(toLog)" language="java"/>
-          </fragments>
-          <interactionConstraint xsi:type="ram:OpaqueExpression" xmi:id="_0JRqwu7hEeiD7NPjIUnPHw" body="enabled" language="java"/>
-        </operands>
+      <fragments xsi:type="ram:ExecutionStatement" xmi:id="__Sfa4O7hEeiD7NPjIUnPHw" covered="_AcFodu3rEeiRHvV3GzBKNQ">
+        <specification xsi:type="ram:OpaqueExpression" xmi:id="__Sfa4e7hEeiD7NPjIUnPHw" body="System.out.println(toLog)" language="java"/>
       </fragments>
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_AcFode3rEeiRHvV3GzBKNQ" covered="_AcFodu3rEeiRHvV3GzBKNQ" message="_AcFoeO3rEeiRHvV3GzBKNQ"/>
-      <lifelines xmi:id="_AcFodu3rEeiRHvV3GzBKNQ" represents="_AcFoee3rEeiRHvV3GzBKNQ" coveredBy="_AcFodO3rEeiRHvV3GzBKNQ _AcFode3rEeiRHvV3GzBKNQ _0JRqwO7hEeiD7NPjIUnPHw __Sfa4O7hEeiD7NPjIUnPHw"/>
+      <lifelines xmi:id="_AcFodu3rEeiRHvV3GzBKNQ" represents="_AcFoee3rEeiRHvV3GzBKNQ" coveredBy="_AcFodO3rEeiRHvV3GzBKNQ _AcFode3rEeiRHvV3GzBKNQ __Sfa4O7hEeiD7NPjIUnPHw"/>
       <messages xmi:id="_AcFod-3rEeiRHvV3GzBKNQ" sendEvent="_AcFoeu3rEeiRHvV3GzBKNQ" receiveEvent="_AcFodO3rEeiRHvV3GzBKNQ" signature="_U5iy0O3lEei4qKOdOry_yA"/>
       <messages xmi:id="_AcFoeO3rEeiRHvV3GzBKNQ" sendEvent="_AcFode3rEeiRHvV3GzBKNQ" receiveEvent="_AcFoe-3rEeiRHvV3GzBKNQ" signature="_U5iy0O3lEei4qKOdOry_yA" messageSort="reply"/>
       <properties xmi:id="_AcFoee3rEeiRHvV3GzBKNQ" name="target" lowerBound="1" type="_d_v8sO0REei3bermciyb1g"/>
@@ -115,6 +113,61 @@
       <formalGates xmi:id="_tSLnPO7NEeiJqKmmcpmnQQ" message="_tSLnOe7NEeiJqKmmcpmnQQ" name="out_disableConsoleLogging"/>
     </specification>
   </messageViews>
+  <messageViews xsi:type="ram:MessageView" xmi:id="_9n4Pk-9XEeid_8KoOHeZBQ" affectedBy="_9n4PoO9XEeid_8KoOHeZBQ" specifies="_8O8twO9XEeid_8KoOHeZBQ">
+    <specification xmi:id="_9n4PlO9XEeid_8KoOHeZBQ">
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_9n4Ple9XEeid_8KoOHeZBQ" covered="_9n4Pl-9XEeid_8KoOHeZBQ" message="_9n4PmO9XEeid_8KoOHeZBQ"/>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_9n4Plu9XEeid_8KoOHeZBQ" covered="_9n4Pl-9XEeid_8KoOHeZBQ" message="_9n4Pme9XEeid_8KoOHeZBQ"/>
+      <lifelines xmi:id="_9n4Pl-9XEeid_8KoOHeZBQ" represents="_9n4Pmu9XEeid_8KoOHeZBQ" coveredBy="_9n4Ple9XEeid_8KoOHeZBQ _9n4Plu9XEeid_8KoOHeZBQ"/>
+      <messages xmi:id="_9n4PmO9XEeid_8KoOHeZBQ" sendEvent="_9n4Pm-9XEeid_8KoOHeZBQ" receiveEvent="_9n4Ple9XEeid_8KoOHeZBQ" signature="_8O8twO9XEeid_8KoOHeZBQ"/>
+      <messages xmi:id="_9n4Pme9XEeid_8KoOHeZBQ" sendEvent="_9n4Plu9XEeid_8KoOHeZBQ" receiveEvent="_9n4PnO9XEeid_8KoOHeZBQ" signature="_8O8twO9XEeid_8KoOHeZBQ" messageSort="reply"/>
+      <properties xmi:id="_9n4Pmu9XEeid_8KoOHeZBQ" name="target" lowerBound="1" type="_R9mnQuxSEei5bMiJMVAJVA"/>
+      <formalGates xmi:id="_9n4Pm-9XEeid_8KoOHeZBQ" message="_9n4PmO9XEeid_8KoOHeZBQ" name="in_log"/>
+      <formalGates xmi:id="_9n4PnO9XEeid_8KoOHeZBQ" message="_9n4Pme9XEeid_8KoOHeZBQ" name="out_log"/>
+    </specification>
+  </messageViews>
+  <messageViews xsi:type="ram:AspectMessageView" xmi:id="_9n4PoO9XEeid_8KoOHeZBQ" name="LogToScreen" pointcut="_8O8twO9XEeid_8KoOHeZBQ">
+    <advice xmi:id="_9n4Poe9XEeid_8KoOHeZBQ">
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_9n4Pou9XEeid_8KoOHeZBQ" covered="_9n4Ppe9XEeid_8KoOHeZBQ" message="_9n4Ppu9XEeid_8KoOHeZBQ"/>
+      <fragments xsi:type="ram:OriginalBehaviorExecution" xmi:id="_9n4Po-9XEeid_8KoOHeZBQ" covered="_9n4Ppe9XEeid_8KoOHeZBQ"/>
+      <fragments xsi:type="ram:CombinedFragment" xmi:id="_DO5icO9YEeid_8KoOHeZBQ" covered="_9n4Ppe9XEeid_8KoOHeZBQ _HRWrQO9YEeid_8KoOHeZBQ" interactionOperator="opt">
+        <operands xmi:id="_DO5ice9YEeid_8KoOHeZBQ">
+          <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_HRYgcO9YEeid_8KoOHeZBQ" covered="_9n4Ppe9XEeid_8KoOHeZBQ" message="_HRaVoO9YEeid_8KoOHeZBQ"/>
+          <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_HRYgce9YEeid_8KoOHeZBQ" covered="_HRWrQO9YEeid_8KoOHeZBQ" message="_HRaVoO9YEeid_8KoOHeZBQ"/>
+          <interactionConstraint xsi:type="ram:OpaqueExpression" xmi:id="_DO5icu9YEeid_8KoOHeZBQ" body="consoleLoggingEnabled" language="java"/>
+        </operands>
+      </fragments>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_9n4PpO9XEeid_8KoOHeZBQ" covered="_9n4Ppe9XEeid_8KoOHeZBQ" message="_9n4Pp-9XEeid_8KoOHeZBQ"/>
+      <lifelines xmi:id="_9n4Ppe9XEeid_8KoOHeZBQ" represents="_9n4PqO9XEeid_8KoOHeZBQ" coveredBy="_9n4Pou9XEeid_8KoOHeZBQ _9n4PpO9XEeid_8KoOHeZBQ _9n4Po-9XEeid_8KoOHeZBQ _DO5icO9YEeid_8KoOHeZBQ _HRYgcO9YEeid_8KoOHeZBQ"/>
+      <lifelines xmi:id="_HRWrQO9YEeid_8KoOHeZBQ" represents="_nt6rIO0REei3bermciyb1g" coveredBy="_DO5icO9YEeid_8KoOHeZBQ _HRYgce9YEeid_8KoOHeZBQ"/>
+      <messages xmi:id="_9n4Ppu9XEeid_8KoOHeZBQ" sendEvent="_9n4Pqe9XEeid_8KoOHeZBQ" receiveEvent="_9n4Pou9XEeid_8KoOHeZBQ" signature="_8O8twO9XEeid_8KoOHeZBQ"/>
+      <messages xmi:id="_9n4Pp-9XEeid_8KoOHeZBQ" sendEvent="_9n4PpO9XEeid_8KoOHeZBQ" receiveEvent="_9n4Pqu9XEeid_8KoOHeZBQ" signature="_8O8twO9XEeid_8KoOHeZBQ" messageSort="reply"/>
+      <messages xmi:id="_HRaVoO9YEeid_8KoOHeZBQ" sendEvent="_HRYgcO9YEeid_8KoOHeZBQ" receiveEvent="_HRYgce9YEeid_8KoOHeZBQ" signature="_U5iy0O3lEei4qKOdOry_yA">
+        <arguments xmi:id="_HRaVoe9YEeid_8KoOHeZBQ" parameter="_Kg2EMO3mEei4qKOdOry_yA">
+          <value xsi:type="ram:ParameterValue" xmi:id="_-fhFYO9bEeiRQOXEbZ4nAg" parameter="_8O8twe9XEeid_8KoOHeZBQ"/>
+        </arguments>
+      </messages>
+      <properties xmi:id="_9n4PqO9XEeid_8KoOHeZBQ" name="target" lowerBound="1" type="_R9mnQuxSEei5bMiJMVAJVA"/>
+      <formalGates xmi:id="_9n4Pqe9XEeid_8KoOHeZBQ" message="_9n4Ppu9XEeid_8KoOHeZBQ" name="in_log"/>
+      <formalGates xmi:id="_9n4Pqu9XEeid_8KoOHeZBQ" message="_9n4Pp-9XEeid_8KoOHeZBQ" name="out_log"/>
+    </advice>
+  </messageViews>
+  <messageViews xsi:type="ram:MessageView" xmi:id="_kXkA4O9iEeiK88s85cIiXw" affectedBy="_kXkA5O9iEeiK88s85cIiXw" specifies="_iPgvQO9iEeiK88s85cIiXw"/>
+  <messageViews xsi:type="ram:AspectMessageView" xmi:id="_kXkA5O9iEeiK88s85cIiXw" name="EnableConsoleLoggingAtStart" pointcut="_iPgvQO9iEeiK88s85cIiXw">
+    <advice xmi:id="_kXkA5e9iEeiK88s85cIiXw">
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_kXkA5u9iEeiK88s85cIiXw" covered="_kXkA6e9iEeiK88s85cIiXw" message="_kXkA6u9iEeiK88s85cIiXw"/>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_lPOosO9iEeiK88s85cIiXw" covered="_kXkA6e9iEeiK88s85cIiXw" message="_lPP20O9iEeiK88s85cIiXw"/>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_lPOose9iEeiK88s85cIiXw" covered="_kXkA6e9iEeiK88s85cIiXw" message="_lPP20O9iEeiK88s85cIiXw"/>
+      <fragments xsi:type="ram:OriginalBehaviorExecution" xmi:id="_kXkA5-9iEeiK88s85cIiXw" covered="_kXkA6e9iEeiK88s85cIiXw"/>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_kXkA6O9iEeiK88s85cIiXw" covered="_kXkA6e9iEeiK88s85cIiXw" message="_kXkA6-9iEeiK88s85cIiXw"/>
+      <lifelines xmi:id="_kXkA6e9iEeiK88s85cIiXw" represents="_kXkA7O9iEeiK88s85cIiXw" coveredBy="_kXkA5u9iEeiK88s85cIiXw _kXkA6O9iEeiK88s85cIiXw _kXkA5-9iEeiK88s85cIiXw _lPOosO9iEeiK88s85cIiXw _lPOose9iEeiK88s85cIiXw"/>
+      <messages xmi:id="_kXkA6u9iEeiK88s85cIiXw" sendEvent="_kXkA7e9iEeiK88s85cIiXw" receiveEvent="_kXkA5u9iEeiK88s85cIiXw" signature="_iPgvQO9iEeiK88s85cIiXw" messageSort="createMessage"/>
+      <messages xmi:id="_kXkA6-9iEeiK88s85cIiXw" sendEvent="_kXkA6O9iEeiK88s85cIiXw" receiveEvent="_kXkA7u9iEeiK88s85cIiXw" signature="_iPgvQO9iEeiK88s85cIiXw" messageSort="reply"/>
+      <messages xmi:id="_lPP20O9iEeiK88s85cIiXw" sendEvent="_lPOosO9iEeiK88s85cIiXw" receiveEvent="_lPOose9iEeiK88s85cIiXw" signature="_VGXjcO7NEeiJqKmmcpmnQQ"/>
+      <properties xmi:id="_kXkA7O9iEeiK88s85cIiXw" name="target" lowerBound="1" type="_R9mnQuxSEei5bMiJMVAJVA"/>
+      <formalGates xmi:id="_kXkA7e9iEeiK88s85cIiXw" message="_kXkA6u9iEeiK88s85cIiXw" name="in_create"/>
+      <formalGates xmi:id="_kXkA7u9iEeiK88s85cIiXw" message="_kXkA6-9iEeiK88s85cIiXw" name="out_create"/>
+    </advice>
+  </messageViews>
   <instantiations xmi:id="_R9mnTuxSEei5bMiJMVAJVA">
     <source xsi:type="ram:Aspect" href="Logging.ram#_0tSx4OwwEeiquolpRP0ulg"/>
   </instantiations>
@@ -124,7 +177,7 @@
         <value xmi:id="_R9mnUuxSEei5bMiJMVAJVA" x="471.0" y="141.0"/>
       </value>
       <value xmi:id="_d_xK0O0REei3bermciyb1g" key="_d_v8sO0REei3bermciyb1g">
-        <value xmi:id="_d_xK0e0REei3bermciyb1g" x="412.0" y="430.99973"/>
+        <value xmi:id="_d_xK0e0REei3bermciyb1g" x="484.5" y="497.99963"/>
       </value>
     </containers>
     <containers xmi:id="_AcFBYO3rEeiRHvV3GzBKNQ" key="_AcFocu3rEeiRHvV3GzBKNQ">
@@ -145,6 +198,24 @@
     <containers xmi:id="_tSLnMO7NEeiJqKmmcpmnQQ" key="_tSLnM-7NEeiJqKmmcpmnQQ">
       <value xmi:id="_tSLnMe7NEeiJqKmmcpmnQQ" key="_tSLnN-7NEeiJqKmmcpmnQQ">
         <value xmi:id="_tSLnMu7NEeiJqKmmcpmnQQ" x="100.0" y="100.0"/>
+      </value>
+    </containers>
+    <containers xmi:id="_9n4PkO9XEeid_8KoOHeZBQ" key="_9n4Pk-9XEeid_8KoOHeZBQ">
+      <value xmi:id="_9n4Pke9XEeid_8KoOHeZBQ" key="_9n4Pl-9XEeid_8KoOHeZBQ">
+        <value xmi:id="_9n4Pku9XEeid_8KoOHeZBQ" x="100.0" y="100.0"/>
+      </value>
+    </containers>
+    <containers xmi:id="_9n4Pne9XEeid_8KoOHeZBQ" key="_9n4PoO9XEeid_8KoOHeZBQ">
+      <value xmi:id="_9n4Pnu9XEeid_8KoOHeZBQ" key="_9n4Ppe9XEeid_8KoOHeZBQ">
+        <value xmi:id="_9n4Pn-9XEeid_8KoOHeZBQ" x="100.0" y="100.0"/>
+      </value>
+      <value xmi:id="_HRXSUO9YEeid_8KoOHeZBQ" key="_HRWrQO9YEeid_8KoOHeZBQ">
+        <value xmi:id="_HRXSUe9YEeid_8KoOHeZBQ" x="305.99985" y="100.0"/>
+      </value>
+    </containers>
+    <containers xmi:id="_kXkA4e9iEeiK88s85cIiXw" key="_kXkA5O9iEeiK88s85cIiXw">
+      <value xmi:id="_kXkA4u9iEeiK88s85cIiXw" key="_kXkA6e9iEeiK88s85cIiXw">
+        <value xmi:id="_kXkA4-9iEeiK88s85cIiXw" x="100.0" y="100.0"/>
       </value>
     </containers>
   </layout>

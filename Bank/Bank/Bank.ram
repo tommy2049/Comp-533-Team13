@@ -414,20 +414,23 @@
     </compositions>
     <reuse href="Bank.core#_xwSIEL0mEeiuha-UdeUxLQ"/>
   </modelReuses>
-  <modelReuses xmi:id="_Yib3UO7xEeit-9sHJfeSZg">
-    <compositions xsi:type="ram:Instantiation" xmi:id="_Yib3Ue7xEeit-9sHJfeSZg">
-      <source xsi:type="ram:Aspect" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_YiXl4O7xEeit-9sHJfeSZg"/>
-      <mappings xsi:type="ram:ClassifierMapping" xmi:id="_iYv1IO7xEeit-9sHJfeSZg" to="_sQCtELp9EeiBEfOlEucTtg">
-        <from xsi:type="ram:Class" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_YiXl4u7xEeit-9sHJfeSZg"/>
-        <operationMappings xmi:id="_j5xjAO7xEeit-9sHJfeSZg" to="_xmud4Lp9EeiBEfOlEucTtg">
-          <from xsi:type="ram:Operation" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_YiXl9O7xEeit-9sHJfeSZg"/>
+  <modelReuses xmi:id="_Kz2pMO96EeiN77meQW1Lhw">
+    <compositions xsi:type="ram:Instantiation" xmi:id="_Kz2pMe96EeiN77meQW1Lhw">
+      <source xsi:type="ram:Aspect" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_KzvUcO96EeiN77meQW1Lhw"/>
+      <mappings xsi:type="ram:ClassifierMapping" xmi:id="_LVxqgO96EeiN77meQW1Lhw" to="_sQCtELp9EeiBEfOlEucTtg">
+        <from xsi:type="ram:Class" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_KzvUcu96EeiN77meQW1Lhw"/>
+        <operationMappings xmi:id="_MvLtcO96EeiN77meQW1Lhw" to="_vcv5oLp9EeiBEfOlEucTtg">
+          <from xsi:type="ram:Operation" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_KzvUdO96EeiN77meQW1Lhw"/>
         </operationMappings>
-        <operationMappings xmi:id="_qAdNYO7xEeit-9sHJfeSZg" to="_y2LTkLp9EeiBEfOlEucTtg">
-          <from xsi:type="ram:Operation" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_YiXl4-7xEeit-9sHJfeSZg"/>
+        <operationMappings xmi:id="_PXDuoO96EeiN77meQW1Lhw" to="_xmud4Lp9EeiBEfOlEucTtg">
+          <from xsi:type="ram:Operation" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_KzvUg-96EeiN77meQW1Lhw"/>
+        </operationMappings>
+        <operationMappings xmi:id="_V_zkQO96EeiN77meQW1Lhw" to="_y2LTkLp9EeiBEfOlEucTtg">
+          <from xsi:type="ram:Operation" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_KzvUc-96EeiN77meQW1Lhw"/>
         </operationMappings>
       </mappings>
     </compositions>
-    <reuse href="Bank.core#_YidsgO7xEeit-9sHJfeSZg"/>
+    <reuse href="Bank.core#_Kz4eYO96EeiN77meQW1Lhw"/>
   </modelReuses>
   <realizes href="Bank.core#_rDCucbp9EeiBEfOlEucTtg"/>
   <coreConcern href="Bank.core#_rDCHYLp9EeiBEfOlEucTtg"/>
@@ -887,7 +890,7 @@
   <messageViews xsi:type="ram:MessageView" xmi:id="_FY62A7p-EeiBEfOlEucTtg" specifies="_y2LTkLp9EeiBEfOlEucTtg">
     <specification xmi:id="_FY62BLp-EeiBEfOlEucTtg">
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_FY62Bbp-EeiBEfOlEucTtg" covered="_FY62B7p-EeiBEfOlEucTtg" message="_FY62CLp-EeiBEfOlEucTtg"/>
-      <fragments xsi:type="ram:CombinedFragment" xmi:id="_GDOXQLp-EeiBEfOlEucTtg" covered="_FY62B7p-EeiBEfOlEucTtg _NO560bp-EeiBEfOlEucTtg">
+      <fragments xsi:type="ram:CombinedFragment" xmi:id="_GDOXQLp-EeiBEfOlEucTtg" covered="_FY62B7p-EeiBEfOlEucTtg _NO560bp-EeiBEfOlEucTtg _yp6YQO96EeiN77meQW1Lhw">
         <operands xmi:id="_GDOXQbp-EeiBEfOlEucTtg">
           <fragments xsi:type="ram:AssignmentStatement" xmi:id="_LOI88Lp-EeiBEfOlEucTtg" covered="_FY62B7p-EeiBEfOlEucTtg" assignTo="_ueI8ULp9EeiBEfOlEucTtg">
             <value xsi:type="ram:OpaqueExpression" xmi:id="_LOI88bp-EeiBEfOlEucTtg" body="balanceInCents - amount" language="java"/>
@@ -895,6 +898,14 @@
           <interactionConstraint xsi:type="ram:OpaqueExpression" xmi:id="_GDOXQrp-EeiBEfOlEucTtg" body="balanceInCents >= amount" language="java"/>
         </operands>
         <operands xmi:id="_JXQT0Lp-EeiBEfOlEucTtg">
+          <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_08SDgO96EeiN77meQW1Lhw" covered="_FY62B7p-EeiBEfOlEucTtg" message="_08SqkO96EeiN77meQW1Lhw"/>
+          <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_08SDge96EeiN77meQW1Lhw" covered="_FY62B7p-EeiBEfOlEucTtg" message="_08SqkO96EeiN77meQW1Lhw"/>
+          <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_yp8NcO96EeiN77meQW1Lhw" covered="_FY62B7p-EeiBEfOlEucTtg" message="_yp80gO96EeiN77meQW1Lhw"/>
+          <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_yp8Nce96EeiN77meQW1Lhw" covered="_yp6YQO96EeiN77meQW1Lhw" message="_yp80gO96EeiN77meQW1Lhw"/>
+          <fragments xsi:type="ram:AssignmentStatement" xmi:id="_4VgCEO96EeiN77meQW1Lhw" covered="_FY62B7p-EeiBEfOlEucTtg">
+            <assignTo xsi:type="ram:Attribute" href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_KzvUie96EeiN77meQW1Lhw"/>
+            <value xsi:type="ram:OpaqueExpression" xmi:id="_4VgCEe96EeiN77meQW1Lhw" body="&quot;Account of &quot; + name + &quot;.txt&quot;" language="java"/>
+          </fragments>
           <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_NO7wALp-EeiBEfOlEucTtg" covered="_FY62B7p-EeiBEfOlEucTtg" message="_NO8XELp-EeiBEfOlEucTtg"/>
           <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_NO7wAbp-EeiBEfOlEucTtg" covered="_NO560bp-EeiBEfOlEucTtg" message="_NO8XELp-EeiBEfOlEucTtg"/>
           <fragments xsi:type="ram:ExecutionStatement" xmi:id="_OZ7jgLp-EeiBEfOlEucTtg" covered="_FY62B7p-EeiBEfOlEucTtg">
@@ -904,13 +915,19 @@
         </operands>
       </fragments>
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_FY62Brp-EeiBEfOlEucTtg" covered="_FY62B7p-EeiBEfOlEucTtg" message="_FY62Cbp-EeiBEfOlEucTtg"/>
-      <lifelines xmi:id="_FY62B7p-EeiBEfOlEucTtg" represents="_FY7dELp-EeiBEfOlEucTtg" coveredBy="_FY62Bbp-EeiBEfOlEucTtg _FY62Brp-EeiBEfOlEucTtg _GDOXQLp-EeiBEfOlEucTtg _LOI88Lp-EeiBEfOlEucTtg _NO7wALp-EeiBEfOlEucTtg _OZ7jgLp-EeiBEfOlEucTtg"/>
+      <lifelines xmi:id="_FY62B7p-EeiBEfOlEucTtg" represents="_FY7dELp-EeiBEfOlEucTtg" coveredBy="_FY62Bbp-EeiBEfOlEucTtg _FY62Brp-EeiBEfOlEucTtg _GDOXQLp-EeiBEfOlEucTtg _LOI88Lp-EeiBEfOlEucTtg _NO7wALp-EeiBEfOlEucTtg _OZ7jgLp-EeiBEfOlEucTtg _yp8NcO96EeiN77meQW1Lhw _08SDgO96EeiN77meQW1Lhw _08SDge96EeiN77meQW1Lhw _4VgCEO96EeiN77meQW1Lhw"/>
       <lifelines xmi:id="_NO560bp-EeiBEfOlEucTtg" represents="_NO560Lp-EeiBEfOlEucTtg" coveredBy="_GDOXQLp-EeiBEfOlEucTtg _NO7wAbp-EeiBEfOlEucTtg"/>
+      <lifelines xmi:id="_yp6YQO96EeiN77meQW1Lhw" represents="_pRSyELp_EeiBEfOlEucTtg" coveredBy="_GDOXQLp-EeiBEfOlEucTtg _yp8Nce96EeiN77meQW1Lhw"/>
       <messages xmi:id="_FY62CLp-EeiBEfOlEucTtg" sendEvent="_FY7dEbp-EeiBEfOlEucTtg" receiveEvent="_FY62Bbp-EeiBEfOlEucTtg" signature="_y2LTkLp9EeiBEfOlEucTtg">
         <localProperties xsi:type="ram:Reference" xmi:id="_NO560Lp-EeiBEfOlEucTtg" name="nefException" lowerBound="1" type="_-iTjgLp9EeiBEfOlEucTtg"/>
+        <localProperties xsi:type="ram:Attribute" xmi:id="_zFPpYO96EeiN77meQW1Lhw" name="name" type="_r7ojV7p9EeiBEfOlEucTtg"/>
       </messages>
       <messages xmi:id="_FY62Cbp-EeiBEfOlEucTtg" sendEvent="_FY62Brp-EeiBEfOlEucTtg" receiveEvent="_FY7dErp-EeiBEfOlEucTtg" signature="_y2LTkLp9EeiBEfOlEucTtg" messageSort="reply"/>
       <messages xmi:id="_NO8XELp-EeiBEfOlEucTtg" sendEvent="_NO7wALp-EeiBEfOlEucTtg" receiveEvent="_NO7wAbp-EeiBEfOlEucTtg" signature="_BtkloLp-EeiBEfOlEucTtg" assignTo="_NO560Lp-EeiBEfOlEucTtg" messageSort="createMessage"/>
+      <messages xmi:id="_yp80gO96EeiN77meQW1Lhw" sendEvent="_yp8NcO96EeiN77meQW1Lhw" receiveEvent="_yp8Nce96EeiN77meQW1Lhw" signature="_DggRELtpEeiQXJgRkRZe7A" assignTo="_zFPpYO96EeiN77meQW1Lhw"/>
+      <messages xmi:id="_08SqkO96EeiN77meQW1Lhw" sendEvent="_08SDgO96EeiN77meQW1Lhw" receiveEvent="_08SDge96EeiN77meQW1Lhw">
+        <signature href="Reused_Logging/Woven_Logging_Log%20Execution_Log%20to%20File_Log%20to%20Screen_Log%20with%20Time_Logging.ram#_KzvUee96EeiN77meQW1Lhw"/>
+      </messages>
       <properties xmi:id="_FY7dELp-EeiBEfOlEucTtg" name="target" lowerBound="1" type="_sQCtELp9EeiBEfOlEucTtg"/>
       <formalGates xmi:id="_FY7dEbp-EeiBEfOlEucTtg" message="_FY62CLp-EeiBEfOlEucTtg" name="in_withdraw"/>
       <formalGates xmi:id="_FY7dErp-EeiBEfOlEucTtg" message="_FY62Cbp-EeiBEfOlEucTtg" name="out_withdraw"/>
@@ -2183,7 +2200,10 @@
         <value xmi:id="_FY62Arp-EeiBEfOlEucTtg" x="100.0" y="100.0"/>
       </value>
       <value xmi:id="_NO6h4Lp-EeiBEfOlEucTtg" key="_NO560bp-EeiBEfOlEucTtg">
-        <value xmi:id="_NO6h4bp-EeiBEfOlEucTtg" x="552.00073" y="342.0"/>
+        <value xmi:id="_NO6h4bp-EeiBEfOlEucTtg" x="552.00073" y="514.0"/>
+      </value>
+      <value xmi:id="_yp6_UO96EeiN77meQW1Lhw" key="_yp6YQO96EeiN77meQW1Lhw">
+        <value xmi:id="_yp6_Ue96EeiN77meQW1Lhw" x="196.0" y="100.0"/>
       </value>
     </containers>
     <containers xmi:id="_SXgMULp-EeiBEfOlEucTtg" key="_SXgMU7p-EeiBEfOlEucTtg">
