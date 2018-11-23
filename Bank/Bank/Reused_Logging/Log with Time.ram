@@ -4,18 +4,11 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_WRDKsexYEei5bMiJMVAJVA">
     <classes xsi:type="ram:Class" xmi:id="_WRDKsuxYEei5bMiJMVAJVA" name="Loggable" partiality="public" visibility="public">
-      <operations xmi:id="_6WQ2gO3mEei4qKOdOry_yA" name="getLogOfOperationExecutionWithTime" visibility="public" returnType="_WRDKuexYEei5bMiJMVAJVA">
+      <operations xmi:id="_6WQ2gO3mEei4qKOdOry_yA" name="getLogOfOperationExecutionWithTime" partiality="public" visibility="public" returnType="_WRDKtexYEei5bMiJMVAJVA">
         <parameters xmi:id="_OvwlkO3vEeiRHvV3GzBKNQ" name="methodName" type="_WRDKuexYEei5bMiJMVAJVA"/>
-        <parameters xmi:id="_HVp2UO6xEeiwka-TGSUwrA" name="time" type="_WRDKvOxYEei5bMiJMVAJVA"/>
       </operations>
-      <operations xmi:id="_fdb8YO62Eei40ooPxoW7cA" name="setExecutionTime" visibility="public" returnType="_WRDKtOxYEei5bMiJMVAJVA">
-        <parameters xmi:id="_iAdSwO62Eei40ooPxoW7cA" name="start" type="_WRDKvOxYEei5bMiJMVAJVA"/>
-        <parameters xmi:id="_fdb8Ye62Eei40ooPxoW7cA" name="end" type="_WRDKvOxYEei5bMiJMVAJVA"/>
-      </operations>
-      <operations xmi:id="_nwn6kO62Eei40ooPxoW7cA" name="getExecutionTime" visibility="public" returnType="_WRDKvOxYEei5bMiJMVAJVA"/>
       <attributes xmi:id="_RPTnwOxbEei5bMiJMVAJVA" name="startTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
       <attributes xmi:id="_Sc-UwOxbEei5bMiJMVAJVA" name="endTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
-      <attributes xmi:id="_qZudEO6xEeiwka-TGSUwrA" name="executionTime" type="_WRDKvOxYEei5bMiJMVAJVA"/>
     </classes>
     <types xsi:type="ram:RVoid" xmi:id="_WRDKtOxYEei5bMiJMVAJVA"/>
     <types xsi:type="ram:RAny" xmi:id="_WRDKtexYEei5bMiJMVAJVA"/>
@@ -28,15 +21,21 @@
     <types xsi:type="ram:RLong" xmi:id="_WRDKvOxYEei5bMiJMVAJVA"/>
     <types xsi:type="ram:RByte" xmi:id="_WRDKvexYEei5bMiJMVAJVA"/>
   </structuralView>
-  <messageViews xsi:type="ram:MessageView" xmi:id="_SfrpY-3uEeiRHvV3GzBKNQ" specifies="_6WQ2gO3mEei4qKOdOry_yA">
+  <messageViews xsi:type="ram:MessageView" xmi:id="_SfrpY-3uEeiRHvV3GzBKNQ" affectedBy="_2OJjA-7VEeiJqKmmcpmnQQ" specifies="_6WQ2gO3mEei4qKOdOry_yA">
     <specification xmi:id="_SfrpZO3uEeiRHvV3GzBKNQ">
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_SfrpZe3uEeiRHvV3GzBKNQ" covered="_SfrpZ-3uEeiRHvV3GzBKNQ" message="_SfrpaO3uEeiRHvV3GzBKNQ"/>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_2B6y8O7XEeiJqKmmcpmnQQ" covered="_SfrpZ-3uEeiRHvV3GzBKNQ" assignTo="_RPTnwOxbEei5bMiJMVAJVA">
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_2B6y8e7XEeiJqKmmcpmnQQ" body="System.nanoTime()" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_7W2QQO7XEeiJqKmmcpmnQQ" covered="_SfrpZ-3uEeiRHvV3GzBKNQ" assignTo="_Sc-UwOxbEei5bMiJMVAJVA">
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_7W2QQe7XEeiJqKmmcpmnQQ" body="System.nanoTime()" language="java"/>
+      </fragments>
       <fragments xsi:type="ram:AssignmentStatement" xmi:id="_BFWrEO3vEeiRHvV3GzBKNQ" covered="_SfrpZ-3uEeiRHvV3GzBKNQ">
         <assignTo xsi:type="ram:Attribute" href="Logging.ram#_pdQIoO3_EeiwuqYpoaM2iA"/>
-        <value xsi:type="ram:OpaqueExpression" xmi:id="_BFWrEe3vEeiRHvV3GzBKNQ" body="methodName + &quot; has executed on object &quot; + this.constructor.name + &quot; in &quot; +  diffTime + &quot; ns&quot;" language="java"/>
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_BFWrEe3vEeiRHvV3GzBKNQ" body="methodName + &quot; has executed on object &quot; + this + &quot; in &quot; +  (endTime - startTime) + &quot; ns&quot;" language="java"/>
       </fragments>
       <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_SfrpZu3uEeiRHvV3GzBKNQ" covered="_SfrpZ-3uEeiRHvV3GzBKNQ" message="_Sfrpae3uEeiRHvV3GzBKNQ"/>
-      <lifelines xmi:id="_SfrpZ-3uEeiRHvV3GzBKNQ" represents="_Sfrpau3uEeiRHvV3GzBKNQ" coveredBy="_SfrpZe3uEeiRHvV3GzBKNQ _SfrpZu3uEeiRHvV3GzBKNQ _BFWrEO3vEeiRHvV3GzBKNQ"/>
+      <lifelines xmi:id="_SfrpZ-3uEeiRHvV3GzBKNQ" represents="_Sfrpau3uEeiRHvV3GzBKNQ" coveredBy="_SfrpZe3uEeiRHvV3GzBKNQ _SfrpZu3uEeiRHvV3GzBKNQ _BFWrEO3vEeiRHvV3GzBKNQ _2B6y8O7XEeiJqKmmcpmnQQ _7W2QQO7XEeiJqKmmcpmnQQ"/>
       <messages xmi:id="_SfrpaO3uEeiRHvV3GzBKNQ" sendEvent="_Sfrpa-3uEeiRHvV3GzBKNQ" receiveEvent="_SfrpZe3uEeiRHvV3GzBKNQ" signature="_6WQ2gO3mEei4qKOdOry_yA"/>
       <messages xmi:id="_Sfrpae3uEeiRHvV3GzBKNQ" sendEvent="_SfrpZu3uEeiRHvV3GzBKNQ" receiveEvent="_SfrpbO3uEeiRHvV3GzBKNQ" signature="_6WQ2gO3mEei4qKOdOry_yA" messageSort="reply">
         <returns xsi:type="ram:StructuralFeatureValue" xmi:id="_brkPgO4BEeicXfEn0ML3YA">
@@ -48,34 +47,30 @@
       <formalGates xmi:id="_SfrpbO3uEeiRHvV3GzBKNQ" message="_Sfrpae3uEeiRHvV3GzBKNQ" name="out_getLogExecutionWithTimeMsg"/>
     </specification>
   </messageViews>
-  <messageViews xsi:type="ram:MessageView" xmi:id="_fdfmw-62Eei40ooPxoW7cA" specifies="_fdb8YO62Eei40ooPxoW7cA">
-    <specification xmi:id="_fdfmxO62Eei40ooPxoW7cA">
-      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_fdfmxe62Eei40ooPxoW7cA" covered="_fdfmye62Eei40ooPxoW7cA" message="_fdfmyu62Eei40ooPxoW7cA"/>
-      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_fdfmxu62Eei40ooPxoW7cA" covered="_fdfmye62Eei40ooPxoW7cA" assignTo="_qZudEO6xEeiwka-TGSUwrA">
-        <value xsi:type="ram:OpaqueExpression" xmi:id="_fdfmx-62Eei40ooPxoW7cA" body="end - start" language="java"/>
+  <messageViews xsi:type="ram:AspectMessageView" xmi:id="_2OJjA-7VEeiJqKmmcpmnQQ" name="LogOpExecutionTime" pointcut="_6WQ2gO3mEei4qKOdOry_yA">
+    <advice xmi:id="_2OJjBO7VEeiJqKmmcpmnQQ">
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_2OJjBe7VEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ" message="_2OJjCe7VEeiJqKmmcpmnQQ"/>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_3esk4O7VEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ" assignTo="_RPTnwOxbEei5bMiJMVAJVA">
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_3esk4e7VEeiJqKmmcpmnQQ" body="System.nanoTime()" language="java"/>
       </fragments>
-      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_fdfmyO62Eei40ooPxoW7cA" covered="_fdfmye62Eei40ooPxoW7cA" message="_fdfmy-62Eei40ooPxoW7cA"/>
-      <lifelines xmi:id="_fdfmye62Eei40ooPxoW7cA" represents="_fdfmzO62Eei40ooPxoW7cA" coveredBy="_fdfmxe62Eei40ooPxoW7cA _fdfmyO62Eei40ooPxoW7cA _fdfmxu62Eei40ooPxoW7cA"/>
-      <messages xmi:id="_fdfmyu62Eei40ooPxoW7cA" sendEvent="_fdfmze62Eei40ooPxoW7cA" receiveEvent="_fdfmxe62Eei40ooPxoW7cA" signature="_fdb8YO62Eei40ooPxoW7cA"/>
-      <messages xmi:id="_fdfmy-62Eei40ooPxoW7cA" sendEvent="_fdfmyO62Eei40ooPxoW7cA" receiveEvent="_fdfmzu62Eei40ooPxoW7cA" signature="_fdb8YO62Eei40ooPxoW7cA" messageSort="reply"/>
-      <properties xmi:id="_fdfmzO62Eei40ooPxoW7cA" name="target" lowerBound="1" type="_WRDKsuxYEei5bMiJMVAJVA"/>
-      <formalGates xmi:id="_fdfmze62Eei40ooPxoW7cA" message="_fdfmyu62Eei40ooPxoW7cA" name="in_setExecutionTime"/>
-      <formalGates xmi:id="_fdfmzu62Eei40ooPxoW7cA" message="_fdfmy-62Eei40ooPxoW7cA" name="out_setExecutionTime"/>
-    </specification>
-  </messageViews>
-  <messageViews xsi:type="ram:MessageView" xmi:id="_nwszE-62Eei40ooPxoW7cA" specifies="_nwn6kO62Eei40ooPxoW7cA">
-    <specification xmi:id="_nwszFO62Eei40ooPxoW7cA">
-      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_nwszFe62Eei40ooPxoW7cA" covered="_nwszF-62Eei40ooPxoW7cA" message="_nwszGO62Eei40ooPxoW7cA"/>
-      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_nwszFu62Eei40ooPxoW7cA" covered="_nwszF-62Eei40ooPxoW7cA" message="_nwszGe62Eei40ooPxoW7cA"/>
-      <lifelines xmi:id="_nwszF-62Eei40ooPxoW7cA" represents="_nwszG-62Eei40ooPxoW7cA" coveredBy="_nwszFe62Eei40ooPxoW7cA _nwszFu62Eei40ooPxoW7cA"/>
-      <messages xmi:id="_nwszGO62Eei40ooPxoW7cA" sendEvent="_nwszHO62Eei40ooPxoW7cA" receiveEvent="_nwszFe62Eei40ooPxoW7cA" signature="_nwn6kO62Eei40ooPxoW7cA"/>
-      <messages xmi:id="_nwszGe62Eei40ooPxoW7cA" sendEvent="_nwszFu62Eei40ooPxoW7cA" receiveEvent="_nwszHe62Eei40ooPxoW7cA" signature="_nwn6kO62Eei40ooPxoW7cA" messageSort="reply">
-        <returns xsi:type="ram:StructuralFeatureValue" xmi:id="_nwszGu62Eei40ooPxoW7cA" value="_qZudEO6xEeiwka-TGSUwrA"/>
+      <fragments xsi:type="ram:OriginalBehaviorExecution" xmi:id="_2OJjBu7VEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ"/>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_04wn8O7WEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ" assignTo="_Sc-UwOxbEei5bMiJMVAJVA">
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_04wn8e7WEeiJqKmmcpmnQQ" body="System.nanoTime()" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_4tIRcO7WEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ">
+        <assignTo xsi:type="ram:Attribute" href="Logging.ram#_pdQIoO3_EeiwuqYpoaM2iA"/>
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_4tIRce7WEeiJqKmmcpmnQQ" body="methodName + &quot; has executed on object &quot;  + this + &quot; in &quot; + (endTime - startTime) + &quot; ns&quot;" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_2OJjB-7VEeiJqKmmcpmnQQ" covered="_2OJjCO7VEeiJqKmmcpmnQQ" message="_2OJjCu7VEeiJqKmmcpmnQQ"/>
+      <lifelines xmi:id="_2OJjCO7VEeiJqKmmcpmnQQ" represents="_2OJjC-7VEeiJqKmmcpmnQQ" coveredBy="_2OJjBe7VEeiJqKmmcpmnQQ _2OJjB-7VEeiJqKmmcpmnQQ _2OJjBu7VEeiJqKmmcpmnQQ _3esk4O7VEeiJqKmmcpmnQQ _04wn8O7WEeiJqKmmcpmnQQ _4tIRcO7WEeiJqKmmcpmnQQ"/>
+      <messages xmi:id="_2OJjCe7VEeiJqKmmcpmnQQ" sendEvent="_2OJjDO7VEeiJqKmmcpmnQQ" receiveEvent="_2OJjBe7VEeiJqKmmcpmnQQ" signature="_6WQ2gO3mEei4qKOdOry_yA"/>
+      <messages xmi:id="_2OJjCu7VEeiJqKmmcpmnQQ" sendEvent="_2OJjB-7VEeiJqKmmcpmnQQ" receiveEvent="_2OJjDe7VEeiJqKmmcpmnQQ" signature="_6WQ2gO3mEei4qKOdOry_yA" messageSort="reply">
+        <returns xsi:type="ram:LiteralNull" xmi:id="_mRWjkO7fEei_DNyqFfK4Ag"/>
       </messages>
-      <properties xmi:id="_nwszG-62Eei40ooPxoW7cA" name="target" lowerBound="1" type="_WRDKsuxYEei5bMiJMVAJVA"/>
-      <formalGates xmi:id="_nwszHO62Eei40ooPxoW7cA" message="_nwszGO62Eei40ooPxoW7cA" name="in_getExecutionTime"/>
-      <formalGates xmi:id="_nwszHe62Eei40ooPxoW7cA" message="_nwszGe62Eei40ooPxoW7cA" name="out_getExecutionTime"/>
-    </specification>
+      <properties xmi:id="_2OJjC-7VEeiJqKmmcpmnQQ" name="target" lowerBound="1" type="_WRDKsuxYEei5bMiJMVAJVA"/>
+      <formalGates xmi:id="_2OJjDO7VEeiJqKmmcpmnQQ" message="_2OJjCe7VEeiJqKmmcpmnQQ" name="in_getLogOfOperationExecutionWithTime"/>
+      <formalGates xmi:id="_2OJjDe7VEeiJqKmmcpmnQQ" message="_2OJjCu7VEeiJqKmmcpmnQQ" name="out_getLogOfOperationExecutionWithTime"/>
+    </advice>
   </messageViews>
   <instantiations xmi:id="_WRDKvuxYEei5bMiJMVAJVA">
     <source xsi:type="ram:Aspect" href="Log%20Execution.ram#_dvrm0OxVEei5bMiJMVAJVA"/>
@@ -91,14 +86,9 @@
         <value xmi:id="_SfrpYu3uEeiRHvV3GzBKNQ" x="100.0" y="100.0"/>
       </value>
     </containers>
-    <containers xmi:id="_fdfmwO62Eei40ooPxoW7cA" key="_fdfmw-62Eei40ooPxoW7cA">
-      <value xmi:id="_fdfmwe62Eei40ooPxoW7cA" key="_fdfmye62Eei40ooPxoW7cA">
-        <value xmi:id="_fdfmwu62Eei40ooPxoW7cA" x="100.0" y="100.0"/>
-      </value>
-    </containers>
-    <containers xmi:id="_nwszEO62Eei40ooPxoW7cA" key="_nwszE-62Eei40ooPxoW7cA">
-      <value xmi:id="_nwszEe62Eei40ooPxoW7cA" key="_nwszF-62Eei40ooPxoW7cA">
-        <value xmi:id="_nwszEu62Eei40ooPxoW7cA"/>
+    <containers xmi:id="_2OJjAO7VEeiJqKmmcpmnQQ" key="_2OJjA-7VEeiJqKmmcpmnQQ">
+      <value xmi:id="_2OJjAe7VEeiJqKmmcpmnQQ" key="_2OJjCO7VEeiJqKmmcpmnQQ">
+        <value xmi:id="_2OJjAu7VEeiJqKmmcpmnQQ" x="100.0" y="100.0"/>
       </value>
     </containers>
   </layout>

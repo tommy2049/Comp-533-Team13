@@ -4,7 +4,7 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_0tWcQOwwEeiquolpRP0ulg">
     <classes xsi:type="ram:Class" xmi:id="_0tYRdOwwEeiquolpRP0ulg" name="Loggable" partiality="public" visibility="public" abstract="true">
-      <attributes xmi:id="_pdQIoO3_EeiwuqYpoaM2iA" name="msg" type="_0taGo-wwEeiquolpRP0ulg"/>
+      <attributes xmi:id="_pdQIoO3_EeiwuqYpoaM2iA" name="stringToLog" type="_0taGo-wwEeiquolpRP0ulg"/>
     </classes>
     <types xsi:type="ram:RVoid" xmi:id="_0tZfmOwwEeiquolpRP0ulg"/>
     <types xsi:type="ram:RAny" xmi:id="_0tZfmewwEeiquolpRP0ulg"/>
