@@ -35,6 +35,7 @@
       </operations>
       <operations xmi:id="_gGYZgO33EeiRHvV3GzBKNQ" name="enable" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA"/>
       <operations xmi:id="_m29VcO33EeiRHvV3GzBKNQ" name="disable" visibility="public" returnType="_R9mnROxSEei5bMiJMVAJVA"/>
+      <operations xmi:id="_XEgfYO6yEeiwka-TGSUwrA" name="isEnabled" visibility="public" returnType="_R9mnRuxSEei5bMiJMVAJVA"/>
       <associationEnds xmi:id="_nt7SMO0REei3bermciyb1g" name="myLoggable" lowerBound="1" navigable="false" assoc="_nt7SMe0REei3bermciyb1g"/>
       <attributes xmi:id="_FkU3IO33EeiRHvV3GzBKNQ" name="enabled" type="_R9mnRuxSEei5bMiJMVAJVA"/>
     </classes>
@@ -115,6 +116,20 @@
       <formalGates xmi:id="_rC2uLO33EeiRHvV3GzBKNQ" message="_rC2uKe33EeiRHvV3GzBKNQ" name="out_disable"/>
     </specification>
   </messageViews>
+  <messageViews xsi:type="ram:MessageView" xmi:id="_XEiUk-6yEeiwka-TGSUwrA" specifies="_XEgfYO6yEeiwka-TGSUwrA">
+    <specification xmi:id="_XEiUlO6yEeiwka-TGSUwrA">
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_XEiUle6yEeiwka-TGSUwrA" covered="_XEiUl-6yEeiwka-TGSUwrA" message="_XEiUmO6yEeiwka-TGSUwrA"/>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_XEiUlu6yEeiwka-TGSUwrA" covered="_XEiUl-6yEeiwka-TGSUwrA" message="_XEiUme6yEeiwka-TGSUwrA"/>
+      <lifelines xmi:id="_XEiUl-6yEeiwka-TGSUwrA" represents="_XEiUm-6yEeiwka-TGSUwrA" coveredBy="_XEiUle6yEeiwka-TGSUwrA _XEiUlu6yEeiwka-TGSUwrA"/>
+      <messages xmi:id="_XEiUmO6yEeiwka-TGSUwrA" sendEvent="_XEiUnO6yEeiwka-TGSUwrA" receiveEvent="_XEiUle6yEeiwka-TGSUwrA" signature="_XEgfYO6yEeiwka-TGSUwrA"/>
+      <messages xmi:id="_XEiUme6yEeiwka-TGSUwrA" sendEvent="_XEiUlu6yEeiwka-TGSUwrA" receiveEvent="_XEiUne6yEeiwka-TGSUwrA" signature="_XEgfYO6yEeiwka-TGSUwrA" messageSort="reply">
+        <returns xsi:type="ram:StructuralFeatureValue" xmi:id="_XEiUmu6yEeiwka-TGSUwrA" value="_FkU3IO33EeiRHvV3GzBKNQ"/>
+      </messages>
+      <properties xmi:id="_XEiUm-6yEeiwka-TGSUwrA" name="target" lowerBound="1" type="_d_v8sO0REei3bermciyb1g"/>
+      <formalGates xmi:id="_XEiUnO6yEeiwka-TGSUwrA" message="_XEiUmO6yEeiwka-TGSUwrA" name="in_isEnabled"/>
+      <formalGates xmi:id="_XEiUne6yEeiwka-TGSUwrA" message="_XEiUme6yEeiwka-TGSUwrA" name="out_isEnabled"/>
+    </specification>
+  </messageViews>
   <instantiations xmi:id="_R9mnTuxSEei5bMiJMVAJVA">
     <source xsi:type="ram:Aspect" href="Logging.ram#_0tSx4OwwEeiquolpRP0ulg"/>
   </instantiations>
@@ -145,6 +160,11 @@
     <containers xmi:id="_rC2uIO33EeiRHvV3GzBKNQ" key="_rC2uI-33EeiRHvV3GzBKNQ">
       <value xmi:id="_rC2uIe33EeiRHvV3GzBKNQ" key="_rC2uJ-33EeiRHvV3GzBKNQ">
         <value xmi:id="_rC2uIu33EeiRHvV3GzBKNQ" x="100.0" y="100.0"/>
+      </value>
+    </containers>
+    <containers xmi:id="_XEiUkO6yEeiwka-TGSUwrA" key="_XEiUk-6yEeiwka-TGSUwrA">
+      <value xmi:id="_XEiUke6yEeiwka-TGSUwrA" key="_XEiUl-6yEeiwka-TGSUwrA">
+        <value xmi:id="_XEiUku6yEeiwka-TGSUwrA" x="100.0" y="100.0"/>
       </value>
     </containers>
   </layout>

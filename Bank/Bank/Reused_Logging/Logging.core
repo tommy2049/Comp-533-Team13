@@ -35,10 +35,10 @@
         </configurations>
       </reuses>
     </features>
-    <features xmi:id="_XV8hkOwpEeiquolpRP0ulg" name="Log Operation Execution" children="_aht6AOwpEeiquolpRP0ulg" parent="_zOhncewoEeiquolpRP0ulg" parentRelationship="Mandatory">
+    <features xmi:id="_XV8hkOwpEeiquolpRP0ulg" name="Log Operation Execution" children="_aht6AOwpEeiquolpRP0ulg" parent="_zOhncewoEeiquolpRP0ulg" parentRelationship="Mandatory" requires="_94kvUOwoEeiquolpRP0ulg">
       <realizedBy xsi:type="ram:Aspect" href="Log%20Execution.ram#_dvrm0OxVEei5bMiJMVAJVA"/>
     </features>
-    <features xmi:id="_aht6AOwpEeiquolpRP0ulg" name="Log with Time" parent="_XV8hkOwpEeiquolpRP0ulg" parentRelationship="Optional">
+    <features xmi:id="_aht6AOwpEeiquolpRP0ulg" name="Log Operation Execution Time" parent="_XV8hkOwpEeiquolpRP0ulg" parentRelationship="Optional" requires="_94kvUOwoEeiquolpRP0ulg">
       <realizedBy xsi:type="ram:Aspect" href="Log%20with%20Time.ram#_WRDKsOxYEei5bMiJMVAJVA"/>
     </features>
   </featureModel>

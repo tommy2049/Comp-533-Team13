@@ -4,9 +4,13 @@
   <coreConcern href="Logging.core#_zObg0OwoEeiquolpRP0ulg"/>
   <structuralView xmi:id="_dvrm0exVEei5bMiJMVAJVA">
     <classes xsi:type="ram:Class" xmi:id="_dvrm0uxVEei5bMiJMVAJVA" name="Loggable" partiality="public" visibility="public">
-      <operations xmi:id="_rF6R4O3mEei4qKOdOry_yA" name="getLogExecutionMsg" visibility="public" returnType="_dvrm2exVEei5bMiJMVAJVA">
+      <operations xmi:id="_rF6R4O3mEei4qKOdOry_yA" name="getLogOfOperationExecution" visibility="public" returnType="_dvrm2exVEei5bMiJMVAJVA">
         <parameters xmi:id="_L5RLgO3tEeiRHvV3GzBKNQ" name="methodName" type="_dvrm2exVEei5bMiJMVAJVA"/>
       </operations>
+      <operations xmi:id="_8unaoO66Eei40ooPxoW7cA" name="logOpExecution" visibility="public" returnType="_dvrm1OxVEei5bMiJMVAJVA">
+        <parameters xmi:id="_DUhXoO67Eei40ooPxoW7cA" name="methodName" type="_dvrm2exVEei5bMiJMVAJVA"/>
+      </operations>
+      <attributes xmi:id="__9-SkO66Eei40ooPxoW7cA" name="methodName" type="_dvrm2exVEei5bMiJMVAJVA"/>
     </classes>
     <types xsi:type="ram:RVoid" xmi:id="_dvrm1OxVEei5bMiJMVAJVA"/>
     <types xsi:type="ram:RAny" xmi:id="_dvrm1exVEei5bMiJMVAJVA"/>
@@ -39,6 +43,25 @@
       <formalGates xmi:id="__ac6bO3sEeiRHvV3GzBKNQ" message="__ac6ae3sEeiRHvV3GzBKNQ" name="out_getLogExecutionMsg"/>
     </specification>
   </messageViews>
+  <messageViews xsi:type="ram:MessageView" xmi:id="_FkVeI-67Eei40ooPxoW7cA" specifies="_8unaoO66Eei40ooPxoW7cA">
+    <specification xmi:id="_FkVeJO67Eei40ooPxoW7cA">
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_FkVeJe67Eei40ooPxoW7cA" covered="_FkVeJ-67Eei40ooPxoW7cA" message="_FkVeKO67Eei40ooPxoW7cA"/>
+      <fragments xsi:type="ram:AssignmentStatement" xmi:id="_bDDCcO67Eei40ooPxoW7cA" covered="_FkVeJ-67Eei40ooPxoW7cA">
+        <assignTo xsi:type="ram:Attribute" href="Logging.ram#_pdQIoO3_EeiwuqYpoaM2iA"/>
+        <value xsi:type="ram:OpaqueExpression" xmi:id="_bDDCce67Eei40ooPxoW7cA" body="methodName + &quot; has executed on object &quot; + this.constructor.name" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:ExecutionStatement" xmi:id="_SCWeAO67Eei40ooPxoW7cA" covered="_FkVeJ-67Eei40ooPxoW7cA">
+        <specification xsi:type="ram:OpaqueExpression" xmi:id="_SCWeAe67Eei40ooPxoW7cA" body="System.out.println(msg)" language="java"/>
+      </fragments>
+      <fragments xsi:type="ram:MessageOccurrenceSpecification" xmi:id="_FkVeJu67Eei40ooPxoW7cA" covered="_FkVeJ-67Eei40ooPxoW7cA" message="_FkVeKe67Eei40ooPxoW7cA"/>
+      <lifelines xmi:id="_FkVeJ-67Eei40ooPxoW7cA" represents="_FkVeKu67Eei40ooPxoW7cA" coveredBy="_FkVeJe67Eei40ooPxoW7cA _FkVeJu67Eei40ooPxoW7cA _SCWeAO67Eei40ooPxoW7cA _bDDCcO67Eei40ooPxoW7cA"/>
+      <messages xmi:id="_FkVeKO67Eei40ooPxoW7cA" sendEvent="_FkVeK-67Eei40ooPxoW7cA" receiveEvent="_FkVeJe67Eei40ooPxoW7cA" signature="_8unaoO66Eei40ooPxoW7cA"/>
+      <messages xmi:id="_FkVeKe67Eei40ooPxoW7cA" sendEvent="_FkVeJu67Eei40ooPxoW7cA" receiveEvent="_FkVeLO67Eei40ooPxoW7cA" signature="_8unaoO66Eei40ooPxoW7cA" messageSort="reply"/>
+      <properties xmi:id="_FkVeKu67Eei40ooPxoW7cA" name="target" lowerBound="1" type="_dvrm0uxVEei5bMiJMVAJVA"/>
+      <formalGates xmi:id="_FkVeK-67Eei40ooPxoW7cA" message="_FkVeKO67Eei40ooPxoW7cA" name="in_logOpExecution"/>
+      <formalGates xmi:id="_FkVeLO67Eei40ooPxoW7cA" message="_FkVeKe67Eei40ooPxoW7cA" name="out_logOpExecution"/>
+    </specification>
+  </messageViews>
   <instantiations xmi:id="_dvrm3uxVEei5bMiJMVAJVA">
     <source xsi:type="ram:Aspect" href="Logging.ram#_0tSx4OwwEeiquolpRP0ulg"/>
   </instantiations>
@@ -51,6 +74,11 @@
     <containers xmi:id="__ac6YO3sEeiRHvV3GzBKNQ" key="__ac6Y-3sEeiRHvV3GzBKNQ">
       <value xmi:id="__ac6Ye3sEeiRHvV3GzBKNQ" key="__ac6Z-3sEeiRHvV3GzBKNQ">
         <value xmi:id="__ac6Yu3sEeiRHvV3GzBKNQ" x="100.0" y="100.0"/>
+      </value>
+    </containers>
+    <containers xmi:id="_FkVeIO67Eei40ooPxoW7cA" key="_FkVeI-67Eei40ooPxoW7cA">
+      <value xmi:id="_FkVeIe67Eei40ooPxoW7cA" key="_FkVeJ-67Eei40ooPxoW7cA">
+        <value xmi:id="_FkVeIu67Eei40ooPxoW7cA" x="100.0" y="100.0"/>
       </value>
     </containers>
   </layout>
